@@ -1,0 +1,2157 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Premium IT & Digital Services for US Businesses | Suretek Infosoft
+    </title>
+    <meta
+      name="description"
+      content="Suretek Infosoft provides premium, high-quality IT, web, and software development services for US businesses at special strategic pricing."
+    />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              deepblue: "#0A2540",
+              brightblue: "#000000",
+              successgreen: "#28A745",
+              lightbg: "#F8F9FA",
+              primaryRed: "#a22426",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              teko: ["Teko", "sans-serif"],
+            },
+            animation: {
+              "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+            },
+            keyframes: {
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Custom Styles for Animations & UI Polish */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #007bff, #28a745);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-pattern {
+        /* background-color: #0a2540; */
+        background-color: #edfcf2;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 3px rgba(1, 10, 19, 0.25);
+      }
+      h1,
+      h2,
+      h3,
+      div {
+        font-family: "Teko", sans-serif;
+      }
+      p {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="text-gray-800 antialiased bg-white selection:bg-brightblue selection:text-white"
+  >
+    <!-- Navigation -->
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div
+            class="flex-shrink-0 flex items-center gap-2 cursor-pointer"
+            onclick="window.scrollTo(0, 0)"
+          >
+            <!-- <div
+              class="w-10 h-10 bg-brightblue rounded-lg flex items-center justify-center"
+            >
+              <i data-lucide="code-2" class="text-white"></i>
+            </div>
+            <span class="font-bold text-2xl text-deepblue tracking-tight"
+              >Suretek<span class="text-primaryRed">.</span></span
+            > -->
+            <img
+              src="https://www.suretekinfosoft.com/assets/images/logo1.png"
+              alt="logo"
+              class="max-w-[130px] w-full h-auto"
+            />
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8 items-center">
+            <!-- <a
+              href="#about"
+              class="text-gray-600 hover:text-primaryRed font-medium transition-colors"
+              >About</a
+            >
+            <a
+              href="#services"
+              class="text-gray-600 hover:text-primaryRed font-medium transition-colors"
+              >Services</a
+            >
+            <a
+              href="#offer"
+              class="text-successgreen hover:text-green-700 font-semibold transition-colors flex items-center gap-1"
+            >
+              <i data-lucide="tag" class="w-4 h-4"></i> Special Offer
+            </a>
+            <a
+              href="#portfolio"
+              class="text-gray-600 hover:text-primaryRed font-medium transition-colors"
+              >Portfolio</a
+            > -->
+            <a
+              href="#contact"
+              class="bg-primaryRed hover:bg-black text-white px-6 py-2.5 rounded-full font-poppins font-medium transition-all transform hover:-translate-y-0.5 shadow-lg shadow-blue-500/30"
+            >
+              Get a Quote
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-600 hover:text-deepblue focus:outline-none"
+            >
+              <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl"
+      >
+        <div class="px-4 pt-2 pb-6 space-y-1">
+          <!-- <a
+            href="#about"
+            class="block px-3 py-3 text-base font-medium font-poppins text-gray-700 hover:text-primaryRed hover:bg-gray-50 rounded-md"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="block px-3 py-3 text-base font-medium font-poppins text-gray-700 hover:text-primaryRed hover:bg-gray-50 rounded-md"
+            >Services</a
+          >
+          <a
+            href="#offer"
+            class="block px-3 py-3 text-base font-medium font-poppins text-successgreen hover:bg-green-50 rounded-md"
+            >Special Offer</a
+          >
+          <a
+            href="#portfolio"
+            class="block px-3 py-3 text-base font-medium font-poppins text-gray-700 hover:text-primaryRed hover:bg-gray-50 rounded-md"
+            >Portfolio</a
+          > -->
+          <a
+            href="#contact"
+            class="block mt-4 text-center bg-brightblue text-white px-4 py-3 rounded-md font-medium"
+            >Get a Quote</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 hero-pattern overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-4xl mx-auto reveal">
+          <!-- <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/40 border border-blue-500/30 text-blue-200 text-sm font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-successgreen animate-pulse"></span>
+                    Exclusive Pricing for US Enterprises & Startups
+                </div> -->
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-black leading-tight mb-6"
+          >
+            Tired of High Software <br class="hidden md:block" />
+            <span
+              class="text-primaryRed bg-clip-text bg-gradient-to-r from-brightblue to-cyan-400"
+              >Development Costs in the US?</span
+            >
+          </h1>
+          <p
+            class="text-lg md:text-xl text-black mb-10 max-w-2xl mx-auto leading-relaxed"
+          >
+            Outsourcing isn’t a cost-cutting tactic; it’s a growth strategy.
+            Start Your 30 hrs Free Trial Today
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+       
+            <a
+              href="#contact"
+              class="w-full sm:w-auto bg-primaryRed hover:bg-black text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(0,123,255,0.4)] flex items-center justify-center gap-2"
+            >
+              Get Free Consultation
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+            <a
+              href="#services"
+              class="w-full sm:w-auto bg-black border-2 border-gray-400 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:bg-primaryRed"
+            >
+              View Services
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Trust Indicators -->
+
+      <!-- Abstract Decoration -->
+      <div
+        class="absolute top-1/2 left-0 w-64 h-64 bg-brightblue rounded-full mix-blend-multiply filter blur-[128px] opacity-40 animate-blob"
+      ></div>
+      <div
+        class="absolute top-1/2 right-0 w-64 h-64 bg-successgreen rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob animation-delay-2000"
+      ></div>
+    </section>
+
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <!-- Heading -->
+        <div class="text-black text-2xl md:text-5xl font-semibold">
+          Proven Results. Measurable Success.
+        </div>
+
+        <div
+          class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 reveal"
+        >
+          <div class="text-center">
+            <h3
+              class="text-3xl md:text-5xl leading-none font-bold text-deepblue mb-1"
+            >
+              30+
+            </h3>
+            <p class="text-gray-700 text-sm font-medium">
+              Active Global Clients
+            </p>
+          </div>
+          <div class="text-center">
+            <h3 class="text-3xl md:text-5xl font-bold text-deepblue mb-1">
+              99%
+            </h3>
+            <p class="text-gray-700 text-sm font-medium">
+              On-Time Delivery Rate
+            </p>
+          </div>
+          <div class="text-center">
+            <h3 class="text-3xl md:text-5xl font-bold text-deepblue mb-1">
+              100%
+            </h3>
+            <p class="text-gray-700 text-sm font-medium">
+              NDA & Data Security Compliance
+            </p>
+          </div>
+          <div class="text-center">
+            <h3 class="text-3xl md:text-5xl font-bold text-deepblue mb-1">
+              72 Hrs
+            </h3>
+            <p class="text-gray-700 text-sm font-medium">
+              Project Kickoff Time
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal">
+            <h4
+              class="text-primaryRed font-bold uppercase tracking-wider text-sm mb-2"
+            >
+              WHY CHOOSE US
+            </h4>
+            <h2
+              class="text-3xl md:text-4xl font-bold text-deepblue mb-6 leading-tight"
+            >
+              <!-- Global IT Excellence, <br>Tailored for Your Growth. -->
+              Get Premium Software <br />
+              Development Without Premium US Costs
+            </h2>
+            <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+              A Smarter Way to Build Your Development Team
+            </p>
+            <!-- <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                        Our dedicated team of experienced developers, designers, and strategists are committed to transforming your digital vision into reality—without the inflated costs typical of local agencies.
+                    </p> -->
+
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <div class="mt-1 bg-green-100 p-1 rounded-full">
+                  <i data-lucide="check" class="w-4 h-4 text-successgreen"></i>
+                </div>
+                <span class="text-gray-700 font-medium"
+                  >Interview Before You Start</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 bg-green-100 p-1 rounded-full">
+                  <i data-lucide="check" class="w-4 h-4 text-successgreen"></i>
+                </div>
+                <span class="text-gray-700 font-medium"
+                  >Risk-Free Trial, Zero Pressure</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 bg-green-100 p-1 rounded-full">
+                  <i data-lucide="check" class="w-4 h-4 text-successgreen"></i>
+                </div>
+                <span class="text-gray-700 font-medium"
+                  >Access Global Talent On Demand</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 bg-green-100 p-1 rounded-full">
+                  <i data-lucide="check" class="w-4 h-4 text-successgreen"></i>
+                </div>
+                <span class="text-gray-700 font-medium"
+                  >Same Team, Start to Finish</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 bg-green-100 p-1 rounded-full">
+                  <i data-lucide="check" class="w-4 h-4 text-successgreen"></i>
+                </div>
+                <span class="text-gray-700 font-medium"
+                  >Quick Replacement, No Delays</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 bg-green-100 p-1 rounded-full">
+                  <i data-lucide="check" class="w-4 h-4 text-successgreen"></i>
+                </div>
+                <span class="text-gray-700 font-medium"
+                  >Zero Risk with Free Trial</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 bg-green-100 p-1 rounded-full">
+                  <i data-lucide="check" class="w-4 h-4 text-successgreen"></i>
+                </div>
+                <span class="text-gray-700 font-medium"
+                  >Reduce Development Costs Significantly</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 bg-green-100 p-1 rounded-full">
+                  <i data-lucide="check" class="w-4 h-4 text-successgreen"></i>
+                </div>
+                <span class="text-gray-700 font-medium"
+                  >Time-zone aligned communication</span
+                >
+              </li>
+            </ul>
+
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 text-primaryRed font-semibold hover:text-blue-800 transition-colors"
+            >
+              Learn more about our team
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+          <div class="relative reveal">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Suretek Team Collaboration"
+              class="rounded-2xl shadow-2xl z-10 relative"
+            />
+            <!-- Decorative element behind image -->
+            <div
+              class="absolute -bottom-6 -right-6 w-full h-full border-4 border-brightblue/20 rounded-2xl z-0"
+            ></div>
+            <div
+              class="absolute -top-6 -left-6 bg-white p-4 rounded-xl shadow-xl z-20 animate-bounce"
+              style="animation-duration: 3s"
+            >
+              <div class="flex items-center gap-3">
+                <div class="bg-successgreen/10 p-3 rounded-full">
+                  <i data-lucide="award" class="w-8 h-8 text-successgreen"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-500 font-medium">Top Rated</p>
+                  <p class="font-bold text-deepblue">Development Agency</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-lightbg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h4
+            class="text-primaryRed font-bold uppercase tracking-wider text-sm mb-2"
+          >
+            Our Expertise
+          </h4>
+          <h2 class="text-3xl md:text-4xl font-bold text-deepblue mb-4">
+            End-to-End Software Development Services for US Businesses
+          </h2>
+          <p class="text-gray-600 text-lg">
+            From idea to launch, we provide scalable, cost-effective, and
+            high-performance software solutions customized to your business
+            goals
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 reveal group"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brightblue transition-colors duration-300"
+            >
+              <i
+                data-lucide="monitor-smartphone"
+                class="w-7 h-7 text-primaryRed group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-deepblue mb-3">
+              Custom Software Development
+            </h3>
+            <!-- <p class="text-gray-600 mb-4 leading-relaxed">Custom, responsive, and high-performance websites and web applications built with modern frameworks like React, Angular, and Node.js.</p> -->
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 reveal group"
+            style="transition-delay: 100ms"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brightblue transition-colors duration-300"
+            >
+              <i
+                data-lucide="smartphone"
+                class="w-7 h-7 text-primaryRed group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-deepblue mb-3">
+              Web Application Development
+            </h3>
+            <!-- <p class="text-gray-600 mb-4 leading-relaxed">Native (iOS & Android) and cross-platform mobile apps (Flutter, React Native) that offer seamless user experiences.</p> -->
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 reveal group"
+            style="transition-delay: 200ms"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brightblue transition-colors duration-300"
+            >
+              <i
+                data-lucide="layout"
+                class="w-7 h-7 text-primaryRed group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-deepblue mb-3">
+              Mobile App Development
+            </h3>
+            <!-- <p class="text-gray-600 mb-4 leading-relaxed">User-centric interfaces and engaging experiences designed to increase retention, conversion, and overall satisfaction.</p> -->
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 reveal group"
+            style="transition-delay: 300ms"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brightblue transition-colors duration-300"
+            >
+              <i
+                data-lucide="trending-up"
+                class="w-7 h-7 text-primaryRed group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-deepblue mb-3">
+              Hire Dedicated Developers
+            </h3>
+            <!-- <p class="text-gray-600 mb-4 leading-relaxed">Data-driven SEO, PPC, and Social Media strategies designed to dominate search rankings and capture high-intent leads.</p> -->
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 reveal group"
+            style="transition-delay: 400ms"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brightblue transition-colors duration-300"
+            >
+              <i
+                data-lucide="shopping-cart"
+                class="w-7 h-7 text-primaryRed group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-deepblue mb-3">UI/UX Design</h3>
+            <!-- <p class="text-gray-600 mb-4 leading-relaxed">Scalable online storefronts using Shopify, Magento, or custom builds, optimized for maximum conversion and secure checkout.</p> -->
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 reveal group"
+            style="transition-delay: 500ms"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brightblue transition-colors duration-300"
+            >
+              <i
+                data-lucide="terminal-square"
+                class="w-7 h-7 text-primaryRed group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-deepblue mb-3">
+              Maintenance & Support
+            </h3>
+            <!-- <p class="text-gray-600 mb-4 leading-relaxed">Tailored enterprise software, CRM/ERP integrations, and automation tools engineered to solve your unique business challenges.</p> -->
+          </div>
+
+          <!-- Service 7 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 reveal group"
+            style="transition-delay: 400ms"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brightblue transition-colors duration-300"
+            >
+              <i
+                data-lucide="container"
+                class="w-7 h-7 text-primaryRed group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-deepblue mb-3">Cloud & DevOps</h3>
+            <!-- <p class="text-gray-600 mb-4 leading-relaxed">Scalable online storefronts using Shopify, Magento, or custom builds, optimized for maximum conversion and secure checkout.</p> -->
+          </div>
+
+          <!-- Service 8 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 reveal group"
+            style="transition-delay: 400ms"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brightblue transition-colors duration-300"
+            >
+              <i
+                data-lucide="workflow"
+                class="w-7 h-7 text-primaryRed group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-deepblue mb-3">
+              API Development & Integration
+            </h3>
+            <!-- <p class="text-gray-600 mb-4 leading-relaxed">Scalable online storefronts using Shopify, Magento, or custom builds, optimized for maximum conversion and secure checkout.</p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Question Section -->
+    <section class="bg-gray-100 py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+          <!-- Left Content -->
+          <div class="md:col-span-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions (FAQs)
+            </h2>
+            <p class="text-gray-600">Got Questions? We’ve Got Answers</p>
+          </div>
+
+          <!-- Accordion -->
+          <div class="md:col-span-8">
+            <div id="accordion" class="divide-y divide-gray-300">
+              <!-- Item -->
+              <div class="accordion-item">
+                <button
+                  class="accordion-header w-full flex justify-between items-center py-5 text-left text-lg font-medium font-poppins text-primaryRed"
+                >
+                  <span
+                    >Why should US companies outsource software
+                    development?</span
+                  >
+                  <span class="icon text-2xl">×</span>
+                </button>
+                <div
+                  class="accordion-content overflow-hidden max-h-40 transition-all duration-300 text-gray-600 text-sm leading-relaxed"
+                >
+                  <p class="pb-5">
+                    US businesses outsource to reduce development costs, access
+                    global talent, and speed up project delivery without the
+                    overhead of hiring in-house teams.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item">
+                <button
+                  class="accordion-header w-full flex justify-between items-center py-5 text-left text-lg font-medium font-poppins text-gray-800"
+                >
+                  <span>Can I interview developers before starting?</span>
+                  <span class="icon text-2xl">+</span>
+                </button>
+                <div
+                  class="accordion-content overflow-hidden max-h-0 transition-all duration-300 text-gray-600 text-sm leading-relaxed"
+                >
+                  <p class="pb-5">
+                    Yes. You can screen and interview developers to ensure they
+                    match your technical and communication needs.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item">
+                <button
+                  class="accordion-header w-full flex justify-between items-center py-5 text-left text-lg font-medium font-poppins text-gray-800"
+                >
+                  <span
+                    >How does this reduce my development cost in the US?</span
+                  >
+                  <span class="icon text-2xl">+</span>
+                </button>
+                <div
+                  class="accordion-content overflow-hidden max-h-0 transition-all duration-300 text-gray-600 text-sm leading-relaxed"
+                >
+                  <p class="pb-5">
+                    You avoid high salaries, benefits, and hiring costs while
+                    still getting <b>high-quality development</b>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item">
+                <button
+                  class="accordion-header w-full flex justify-between items-center py-5 text-left text-lg font-medium font-poppins text-gray-800"
+                >
+                  <span>Is outsourcing software development secure?</span>
+                  <span class="icon text-2xl">+</span>
+                </button>
+                <div
+                  class="accordion-content overflow-hidden max-h-0 transition-all duration-300 text-gray-600 text-sm leading-relaxed"
+                >
+                  <p class="pb-5">
+                    Yes. With proper NDAs, secure workflows, and data protection
+                    practices, outsourcing is <b> safe and reliable</b>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item">
+                <button
+                  class="accordion-header w-full flex justify-between items-center py-5 text-left text-lg font-medium font-poppins text-gray-800"
+                >
+                  <span>Do you offer a free trial before starting?</span>
+                  <span class="icon text-2xl">+</span>
+                </button>
+                <div
+                  class="accordion-content overflow-hidden max-h-0 transition-all duration-300 text-gray-600 text-sm leading-relaxed"
+                >
+                  <p class="pb-5">
+                    Yes, we offer a <b>100% free trial</b> so you can evaluate
+                    our work quality, communication, and speed before making any
+                    commitment.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item">
+                <button
+                  class="accordion-header w-full flex justify-between items-center py-5 text-left text-lg font-medium font-poppins text-gray-800"
+                >
+                  <span>How quickly can you start my project?</span>
+                  <span class="icon text-2xl">+</span>
+                </button>
+                <div
+                  class="accordion-content overflow-hidden max-h-0 transition-all duration-300 text-gray-600 text-sm leading-relaxed"
+                >
+                  <p class="pb-5">
+                    We can typically begin within <b>24–48 hours</b> after
+                    understanding your requirements.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item">
+                <button
+                  class="accordion-header w-full flex justify-between items-center py-5 text-left text-lg font-medium font-poppins text-gray-800"
+                >
+                  <span>Can I hire dedicated developers for my project?</span>
+                  <span class="icon text-2xl">+</span>
+                </button>
+                <div
+                  class="accordion-content overflow-hidden max-h-0 transition-all duration-300 text-gray-600 text-sm leading-relaxed"
+                >
+                  <p class="pb-5">
+                    Absolutely. You can hire
+                    <b>full-time or part-time dedicated developers</b> based on
+                    your needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- case studies section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Heading -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
+            Case Studies
+          </h2>
+          <!-- <p class="text-gray-600 max-w-2xl mx-auto">
+            Explore our full suite of technology services designed to support
+            your digital journey:
+          </p> -->
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card (Icon Type) -->
+          <div
+            class="w-full rounded-[15px] p-5 flex flex-col justify-end border border-gray-300 bg-white shadow-md hover:shadow-lg transition"
+          >
+            <img
+              src="https://www.suretekinfosoft.com/assets/images/icons/agile.png"
+              class="mb-4 w-14 h-14"
+              alt=""
+            />
+            <h4 class="text-lg md:text-2xl font-medium font-poppins mb-2">
+              Healthcare Digitalization
+            </h4>
+            <p class="text-gray-600 text-sm font-poppins mb-4">
+              Secure, scalable EHR system enabling seamless patient data management and compliance.
+            </p>
+            <a
+              href="https://www.suretekinfosoft.com/case-studies/how-suretek-helped-a-us-healthcare-provider-go-fully-digital-with-a-secure-ehr-system.php"
+              class="text-black text-sm font-medium font-poppins font-medium inline-flex items-center gap-2 hover:text-primaryRed"
+            >
+              Read More →
+            </a>
+          </div>
+
+          <!-- Card (Image Type) -->
+          <div class="relative h-[350px] rounded-xl overflow-hidden group">
+            <img
+              src="assets/images/web-application-development.webp"
+              class="w-full h-full object-cover"
+              alt=""
+            />
+
+            <!-- Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-5"
+            >
+              <!-- Content wrapper (animation target) -->
+              <div
+                class="transform translate-y-1/2 group-hover:translate-y-0 transition-all duration-500"
+              >
+                <h4
+                  class="text-white text-lg md:text-2xl font-medium font-poppins font-poppins mb-2"
+                >
+                  Real Estate Digitization
+                </h4>
+
+                <p
+                  class="text-gray-200 text-sm md:text-sm font-poppins mb-3 opacity-0 group-hover:opacity-100 transition duration-300 delay-200"
+                >
+             Modernizing appraisal workflows with faster reporting and digital efficiency.
+                </p>
+
+                <a
+                  href="https://www.suretekinfosoft.com/case-studies/us-based-real-estate-firm-went-digital.php"
+                  class="text-white text-sm font-medium font-poppins font-medium opacity-0 group-hover:opacity-100 hover:text-primaryRed transition duration-300 delay-300"
+                >
+                  Read More →
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Example another icon card -->
+          <div
+            class="w-full rounded-[15px] p-5 flex flex-col justify-end border border-gray-300 bg-white shadow-md hover:shadow-lg transition"
+          >
+            <img
+              src="https://www.suretekinfosoft.com/assets/images/icons/tech-stack.png"
+              class="mb-4 w-14 h-14"
+              alt=""
+            />
+            <h4
+              class="text-lg md:text-2xl font-medium font-poppins font-poppins mb-2"
+            >
+              Smart Sales Solution
+            </h4>
+            <p class="text-gray-600 text-sm font-poppins mb-4">
+              Boosting sales performance through automation, insights, and smarter processes.
+            </p>
+            <a
+              href="https://www.suretekinfosoft.com/case-studies/suretek-revolutionized-sales-with-android-app.php"
+              class="text-black text-sm font-medium font-poppins font-medium inline-flex items-center gap-2 hover:text-primaryRed"
+            >
+              Read More →
+            </a>
+          </div>
+
+          <!-- Card (Image Type) -->
+          <div class="relative h-[350px] rounded-xl overflow-hidden group">
+            <img
+              src="assets/images/web-application-development.webp"
+              class="w-full h-full object-cover"
+              alt=""
+            />
+
+            <!-- Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-5"
+            >
+              <!-- Content wrapper (animation target) -->
+              <div
+                class="transform translate-y-1/2 group-hover:translate-y-0 transition-all duration-500"
+              >
+                <h4
+                  class="text-white text-lg md:text-2xl font-medium font-poppins font-poppins mb-2"
+                >
+                  QSR IT Support
+                </h4>
+
+                <p
+                  class="text-gray-200 text-sm md:text-sm font-poppins mb-3 opacity-0 group-hover:opacity-100 transition duration-300 delay-200"
+                >
+                 Reliable IT infrastructure ensuring smooth operations for a fast-growing QSR platform.
+                </p>
+
+                <a
+                  href="https://www.suretekinfosoft.com/case-studies/strengthening-us-qsr-platform.php"
+                  class="text-white text-sm font-medium font-poppins font-medium opacity-0 group-hover:opacity-100 hover:text-primaryRed transition duration-300 delay-300"
+                >
+                  Read More →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Example another icon card -->
+          <div
+            class="w-full rounded-[15px] p-5 flex flex-col justify-end border border-gray-300 bg-white shadow-md hover:shadow-lg transition"
+          >
+            <img
+              src="https://www.suretekinfosoft.com/assets/images/icons/tech-stack.png"
+              class="mb-4 w-14 h-14"
+              alt=""
+            />
+            <h4
+              class="text-lg md:text-2xl font-medium font-poppins font-poppins mb-2"
+            >
+             AI Matchmaking Platform
+            </h4>
+            <p class="text-gray-600 text-sm font-poppins mb-4">
+              Leveraging AI to create meaningful, accurate, and personalized matchmaking experiences.
+            </p>
+            <a
+              href="https://www.suretekinfosoft.com/case-studies/empowering-faith-based-matchmaking-using-ai.php"
+              class="text-black text-sm font-medium font-poppins font-medium inline-flex items-center gap-2 hover:text-primaryRed"
+            >
+              Read More →
+            </a>
+          </div>
+
+          <!-- Card (Image Type) -->
+          <div class="relative h-[350px] rounded-xl overflow-hidden group">
+            <img
+              src="assets/images/web-application-development.webp"
+              class="w-full h-full object-cover"
+              alt=""
+            />
+
+            <!-- Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-5"
+            >
+              <!-- Content wrapper (animation target) -->
+              <div
+                class="transform translate-y-1/2 group-hover:translate-y-0 transition-all duration-500"
+              >
+                <h4
+                  class="text-white text-lg md:text-2xl font-medium font-poppins font-poppins mb-2"
+                >
+                  Web Application Development
+                </h4>
+
+                <p
+                  class="text-gray-200 text-sm md:text-sm font-poppins mb-3 opacity-0 group-hover:opacity-100 transition duration-300 delay-200"
+                >
+                  We create fast, secure web applications using modern
+                  technologies.
+                </p>
+
+                <a
+                  href="/"
+                  class="text-white text-sm font-medium font-poppins font-medium opacity-0 group-hover:opacity-100 hover:text-primaryRed transition duration-300 delay-300"
+                >
+                  Read More →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offer Section -->
+    <!-- <section id="offer" class="py-20 bg-deepblue relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern
+              id="pricing-pattern"
+              width="40"
+              height="40"
+              patternUnits="userSpaceOnUse"
+            >
+              <path
+                d="M0 40L40 0H20L0 20M40 40V20L20 40"
+                fill="currentColor"
+                stroke="none"
+              />
+            </pattern>
+          </defs>
+          <rect
+            width="100%"
+            height="100%"
+            fill="url(#pricing-pattern)"
+            class="text-primaryRed"
+          />
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-2xl reveal flex flex-col lg:flex-row"
+        >
+      
+          <div class="p-10 lg:p-14 lg:w-3/5 bg-white">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-600 text-sm font-bold mb-6"
+            >
+              <i data-lucide="clock" class="w-4 h-4"></i> Limited Time Offer
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-deepblue mb-4">
+              Strategic Advantage Pricing for US Companies
+            </h2>
+            <p class="text-gray-600 mb-6 text-lg">
+              In today's economic climate, smart businesses are optimizing their
+              tech budgets. For a limited time, Suretek Infosoft is offering our
+              premium enterprise-grade development services to US clients at a
+              uniquely reduced strategic rate.
+            </p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center gap-3">
+                <div class="bg-blue-100 p-1.5 rounded-full">
+                  <i
+                    data-lucide="trending-down"
+                    class="w-5 h-5 text-primaryRed"
+                  ></i>
+                </div>
+                <span class="text-gray-800 font-medium"
+                  >Up to 60% cost reduction vs. local US agencies</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="bg-blue-100 p-1.5 rounded-full">
+                  <i
+                    data-lucide="shield-check"
+                    class="w-5 h-5 text-primaryRed"
+                  ></i>
+                </div>
+                <span class="text-gray-800 font-medium"
+                  >Zero compromise on code quality or architecture</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="bg-blue-100 p-1.5 rounded-full">
+                  <i data-lucide="zap" class="w-5 h-5 text-primaryRed"></i>
+                </div>
+                <span class="text-gray-800 font-medium"
+                  >Dedicated project managers assigned to your time zone</span
+                >
+              </li>
+            </ul>
+            <p class="text-sm text-gray-500 italic">
+              *Offer valid for new contracts signed this month. Limited to 5 new
+              enterprise slots to ensure quality.
+            </p>
+          </div>
+
+        
+          <div
+            class="p-10 lg:p-14 lg:w-2/5 bg-gray-50 border-l border-gray-200 flex flex-col justify-center"
+          >
+            <h3 class="text-xl font-bold text-center text-deepblue mb-6">
+              The Suretek Advantage
+            </h3>
+
+            <div
+              class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 mb-4 flex justify-between items-center"
+            >
+              <div>
+                <p class="text-sm text-gray-500 font-medium">
+                  Typical US Agency
+                </p>
+                <p class="font-bold text-gray-400 line-through text-xl">
+                  $150 - $250/hr
+                </p>
+              </div>
+              <i data-lucide="x-circle" class="text-gray-300 w-8 h-8"></i>
+            </div>
+
+            <div
+              class="bg-green-50 p-5 rounded-xl shadow-md border-2 border-successgreen mb-8 flex justify-between items-center transform scale-105"
+            >
+              <div>
+                <p
+                  class="text-sm text-green-800 font-bold uppercase tracking-wider mb-1"
+                >
+                  Suretek Premium Rate
+                </p>
+                <p class="font-extrabold text-successgreen text-3xl">
+                  Inquire for Price
+                </p>
+                <p class="text-xs text-green-700 mt-1">
+                  Guaranteed ROI-focused pricing
+                </p>
+              </div>
+              <i
+                data-lucide="check-circle"
+                class="text-successgreen w-10 h-10"
+              ></i>
+            </div>
+
+            <a
+              href="#contact"
+              class="w-full bg-successgreen hover:bg-green-600 text-white py-4 rounded-xl font-bold text-lg text-center transition-all shadow-[0_0_15px_rgba(40,167,69,0.4)] hover:shadow-[0_0_25px_rgba(40,167,69,0.6)]"
+            >
+              Claim Your Rate Now
+            </a>
+            <p class="text-center text-sm text-red-500 font-semibold mt-4">
+              Only 3 slots remaining
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h2 class="text-3xl md:text-4xl font-bold text-deepblue mb-4">
+            Why US Businesses Trust Suretek
+          </h2>
+          <p class="text-gray-600 text-lg">
+            We bridge the gap between premium quality and operational
+            efficiency.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center reveal">
+            <div
+              class="w-20 h-20 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border border-blue-100"
+            >
+              <i data-lucide="gem" class="w-10 h-10 text-primaryRed"></i>
+            </div>
+            <h3 class="text-xl font-bold text-deepblue mb-2">
+              Unmatched Quality
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Rigorous QA processes and clean, scalable code architecture ensure
+              your product works flawlessly.
+            </p>
+          </div>
+          <div class="text-center reveal" style="transition-delay: 100ms">
+            <div
+              class="w-20 h-20 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border border-blue-100"
+            >
+              <i data-lucide="rocket" class="w-10 h-10 text-primaryRed"></i>
+            </div>
+            <h3 class="text-xl font-bold text-deepblue mb-2">Rapid Delivery</h3>
+            <p class="text-gray-600 text-sm">
+              Agile sprints and a dedicated workforce mean your product hits the
+              market faster than the competition.
+            </p>
+          </div>
+          <div class="text-center reveal" style="transition-delay: 200ms">
+            <div
+              class="w-20 h-20 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border border-blue-100"
+            >
+              <i data-lucide="users" class="w-10 h-10 text-primaryRed"></i>
+            </div>
+            <h3 class="text-xl font-bold text-deepblue mb-2">Top 1% Talent</h3>
+            <p class="text-gray-600 text-sm">
+              Access a vetted pool of senior developers, UI/UX experts, and
+              cloud architects ready to scale your vision.
+            </p>
+          </div>
+          <div class="text-center reveal" style="transition-delay: 300ms">
+            <div
+              class="w-20 h-20 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border border-blue-100"
+            >
+              <i data-lucide="headphones" class="w-10 h-10 text-primaryRed"></i>
+            </div>
+            <h3 class="text-xl font-bold text-deepblue mb-2">
+              US Time Zone Support
+            </h3>
+            <p class="text-gray-600 text-sm">
+              We provide overlap hours to ensure seamless communication,
+              standups, and real-time collaboration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-lightbg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-12 reveal"
+        >
+          <div class="max-w-2xl">
+            <h4
+              class="text-primaryRed font-bold uppercase tracking-wider text-sm mb-2"
+            >
+              Featured Work
+            </h4>
+            <h2 class="text-3xl md:text-4xl font-bold text-deepblue">
+              Solutions That Drive Results
+            </h2>
+          </div>
+          <a
+            href="#contact"
+            class="mt-4 md:mt-0 text-primaryRed font-semibold hover:text-black flex items-center gap-1"
+          >
+            Get in Touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="group relative rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all reveal cursor-pointer"
+          >
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Fintech Dashboard"
+                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-deepblue/90 to-transparent opacity-80"
+              ></div>
+              <div
+                class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold border border-white/30"
+              >
+                FinTech
+              </div>
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+            >
+              <h3 class="text-2xl font-bold mb-2">PayFlow Analytics</h3>
+              <p
+                class="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"
+              >
+                Complete architectural rewrite and UI overhaul for a US-based
+                payment processor.
+              </p>
+              <div class="flex gap-4">
+                <div class="flex flex-col">
+                  <span class="text-successgreen font-bold text-lg">+150%</span>
+                  <span class="text-xs text-gray-400 uppercase"
+                    >Conversion</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-primaryRed font-bold text-lg">3x</span>
+                  <span class="text-xs text-gray-400 uppercase"
+                    >Faster Load</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="group relative rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all reveal cursor-pointer"
+            style="transition-delay: 100ms"
+          >
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Mobile E-commerce App"
+                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-deepblue/90 to-transparent opacity-80"
+              ></div>
+              <div
+                class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold border border-white/30"
+              >
+                E-Commerce
+              </div>
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+            >
+              <h3 class="text-2xl font-bold mb-2">ShopNova App</h3>
+              <p
+                class="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"
+              >
+                React Native mobile application built for a retail giant with
+                real-time inventory sync.
+              </p>
+              <div class="flex gap-4">
+                <div class="flex flex-col">
+                  <span class="text-successgreen font-bold text-lg">4.9</span>
+                  <span class="text-xs text-gray-400 uppercase"
+                    >App Store Rating</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-primaryRed font-bold text-lg">2M+</span>
+                  <span class="text-xs text-gray-400 uppercase">Downloads</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="group relative rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all reveal cursor-pointer"
+          >
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Healthcare Portal"
+                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-deepblue/90 to-transparent opacity-80"
+              ></div>
+              <div
+                class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold border border-white/30"
+              >
+                Healthcare
+              </div>
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+            >
+              <h3 class="text-2xl font-bold mb-2">CareConnect Portal</h3>
+              <p
+                class="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"
+              >
+                HIPAA-compliant patient management system with telemedicine
+                video integration.
+              </p>
+              <div class="flex gap-4">
+                <div class="flex flex-col">
+                  <span class="text-successgreen font-bold text-lg">100%</span>
+                  <span class="text-xs text-gray-400 uppercase"
+                    >Compliance</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-primaryRed font-bold text-lg">-40%</span>
+                  <span class="text-xs text-gray-400 uppercase"
+                    >Admin Time</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="group relative rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all reveal cursor-pointer"
+            style="transition-delay: 100ms"
+          >
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Data Analytics Software"
+                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-deepblue/90 to-transparent opacity-80"
+              ></div>
+              <div
+                class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold border border-white/30"
+              >
+                SaaS
+              </div>
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+            >
+              <h3 class="text-2xl font-bold mb-2">DataMetrics AI</h3>
+              <p
+                class="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"
+              >
+                Custom AI-driven marketing analytics dashboard built on React
+                and Node.js.
+              </p>
+              <div class="flex gap-4">
+                <div class="flex flex-col">
+                  <span class="text-successgreen font-bold text-lg">$2M+</span>
+                  <span class="text-xs text-gray-400 uppercase"
+                    >ARR Generated</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-primaryRed font-bold text-lg">99.9%</span>
+                  <span class="text-xs text-gray-400 uppercase">Uptime</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h4
+            class="text-primaryRed font-bold uppercase tracking-wider text-sm mb-2"
+          >
+            Client Success Stories
+          </h4>
+          <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
+            Trusted by US Business Leaders
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-lightbg p-8 rounded-2xl relative reveal">
+            <i
+              data-lucide="quote"
+              class="absolute top-6 right-6 w-10 h-10 text-gray-200"
+            ></i>
+            <div class="flex gap-1 text-yellow-400 mb-4">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <p class="text-gray-600 mb-6 italic">
+              "Partnering with Suretek Infosoft was the best strategic decision
+              for our startup. They delivered our MVP ahead of schedule and the
+              code quality was phenomenal. We saved thousands compared to hiring
+              locally."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                  alt="Client"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-deepblue text-sm">Michael T.</h4>
+                <p class="text-xs text-gray-500">
+                  CTO, Logistix AI (San Francisco, CA)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-lightbg p-8 rounded-2xl relative reveal"
+            style="transition-delay: 100ms"
+          >
+            <i
+              data-lucide="quote"
+              class="absolute top-6 right-6 w-10 h-10 text-gray-200"
+            ></i>
+            <div class="flex gap-1 text-yellow-400 mb-4">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <p class="text-gray-600 mb-6 italic">
+              "The level of communication and dedication from the Suretek team
+              is unmatched. They feel like an extension of our in-house team.
+              The custom ERP they built increased our operational efficiency by
+              40%."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                  alt="Client"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-deepblue text-sm">Sarah Jenkins</h4>
+                <p class="text-xs text-gray-500">
+                  VP of Ops, RetailCore (Austin, TX)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-lightbg p-8 rounded-2xl relative reveal"
+            style="transition-delay: 200ms"
+          >
+            <i
+              data-lucide="quote"
+              class="absolute top-6 right-6 w-10 h-10 text-gray-200"
+            ></i>
+            <div class="flex gap-1 text-yellow-400 mb-4">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <p class="text-gray-600 mb-6 italic">
+              "I was initially hesitant about offshore development, but Suretek
+              changed my mind entirely. Their UI/UX design is world-class, and
+              their technical execution on our healthcare app was flawless and
+              HIPAA compliant."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                  alt="Client"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-deepblue text-sm">David Chen</h4>
+                <p class="text-xs text-gray-500">
+                  Founder, HealthBridge (New York, NY)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-deepblue text-white overflow-hidden relative">
+      <div class="absolute inset-0 opacity-5">
+        <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern
+              id="grid"
+              width="40"
+              height="40"
+              patternUnits="userSpaceOnUse"
+            >
+              <path
+                d="M0 40L40 0H20L0 20M40 40V20L20 40"
+                fill="currentColor"
+                stroke="none"
+              />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h4
+            class="text-primaryRed font-bold uppercase tracking-wider text-sm mb-2"
+          >
+            How We Work
+          </h4>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            A Proven Process for Success
+          </h2>
+          <p class="text-gray-400 text-lg">
+            From concept to deployment, our transparent methodology ensures zero
+            surprises and maximum ROI.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-center relative">
+          <!-- Connecting Line for Desktop -->
+          <div
+            class="hidden md:block absolute top-10 left-10 right-10 h-0.5 bg-gray-700 z-0"
+          ></div>
+
+          <!-- Step 1 -->
+          <div class="relative z-10 reveal">
+            <div
+              class="w-20 h-20 mx-auto bg-deepblue border-4 border-gray-700 rounded-full flex items-center justify-center mb-4 transition-colors hover:border-brightblue"
+            >
+              <i
+                data-lucide="message-square"
+                class="w-8 h-8 text-primaryRed"
+              ></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">1. Consultation</h3>
+            <p class="text-sm text-gray-400">
+              Understanding your business goals and technical requirements.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative z-10 reveal" style="transition-delay: 100ms">
+            <div
+              class="w-20 h-20 mx-auto bg-deepblue border-4 border-gray-700 rounded-full flex items-center justify-center mb-4 transition-colors hover:border-brightblue"
+            >
+              <i data-lucide="file-search" class="w-8 h-8 text-primaryRed"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">2. Planning</h3>
+            <p class="text-sm text-gray-400">
+              Creating wireframes, tech stack selection, and project roadmaps.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative z-10 reveal" style="transition-delay: 200ms">
+            <div
+              class="w-20 h-20 mx-auto bg-deepblue border-4 border-brightblue rounded-full flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(0,123,255,0.5)]"
+            >
+              <i data-lucide="code-2" class="w-8 h-8 text-white"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">3. Development</h3>
+            <p class="text-sm text-gray-400">
+              Agile coding sprints with regular updates and feedback loops.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="relative z-10 reveal" style="transition-delay: 300ms">
+            <div
+              class="w-20 h-20 mx-auto bg-deepblue border-4 border-gray-700 rounded-full flex items-center justify-center mb-4 transition-colors hover:border-brightblue"
+            >
+              <i data-lucide="rocket" class="w-8 h-8 text-primaryRed"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">4. Delivery</h3>
+            <p class="text-sm text-gray-400">
+              Rigorous QA testing, deployment, and performance optimization.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="relative z-10 reveal" style="transition-delay: 400ms">
+            <div
+              class="w-20 h-20 mx-auto bg-deepblue border-4 border-gray-700 rounded-full flex items-center justify-center mb-4 transition-colors hover:border-brightblue"
+            >
+              <i data-lucide="headset" class="w-8 h-8 text-primaryRed"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">5. Support</h3>
+            <p class="text-sm text-gray-400">
+              Ongoing maintenance, updates, and scalability enhancements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-To-Action Section -->
+    <section class="py-20 bg-brightblue relative">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-blue-700 to-brightblue opacity-90"
+      ></div>
+      <div
+        class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center reveal"
+      >
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+          Ready to Transform Your Business?
+        </h2>
+        <p class="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+          Stop overpaying for local development. Get enterprise-grade solutions
+          built by global experts. Secure your limited-time strategic pricing
+          today.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#contact"
+            class="bg-white text-primaryRed px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-lg transform hover:-translate-y-1"
+          >
+            Start Your Project Today
+          </a>
+          <a
+            href="mailto:info@suretekinfosoft.com"
+            class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+          >
+            <i data-lucide="calendar" class="w-5 h-5"></i> Book a Call
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-lightbg relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <!-- Contact Info -->
+          <div class="reveal">
+            <h4
+              class="text-primaryRed font-bold uppercase tracking-wider text-sm mb-2"
+            >
+              Get in Touch
+            </h4>
+            <h2 class="text-3xl md:text-4xl font-bold text-deepblue mb-6">
+              Let's Discuss Your Next Big Idea.
+            </h2>
+            <p class="text-gray-600 mb-8 text-lg">
+              Fill out the form to request a free quote or consultation. Our
+              business analysts will review your requirements and get back to
+              you within 24 hours.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="bg-white p-3 rounded-xl shadow-sm">
+                  <i data-lucide="mail" class="w-6 h-6 text-primaryRed"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-deepblue text-lg">Email Us</h4>
+                  <a
+                    href="mailto:info@suretekinfosoft.com"
+                    class="text-gray-600 hover:text-primaryRed font-poppins"
+                    >info@suretekinfosoft.com</a
+                  >
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="bg-white p-3 rounded-xl shadow-sm">
+                  <i
+                    data-lucide="phone-call"
+                    class="w-6 h-6 text-successgreen"
+                  ></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-deepblue text-lg">
+                    Call or WhatsApp
+                  </h4>
+                  <p class="text-gray-600">+1 (555) 123-4567 (US Sales)</p>
+                  <p class="text-gray-600">
+                    +91 98765 43210 (Global Headquaters)
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="bg-white p-3 rounded-xl shadow-sm">
+                  <i data-lucide="map-pin" class="w-6 h-6 text-primaryRed"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-deepblue text-lg">
+                    Global Headquarters
+                  </h4>
+                  <p class="text-gray-600">
+                    Noida, Uttar Pradesh, India<br />Serving Clients Globally
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="bg-white p-8 md:p-10 rounded-2xl shadow-xl reveal">
+            <h3 class="text-2xl font-bold text-deepblue mb-6">
+              Request a Free Quote
+            </h3>
+            <form
+              action="#"
+              method="POST"
+              class="space-y-5"
+              onsubmit="
+                event.preventDefault();
+                alert(
+                  'Thank you for reaching out! A representative will contact you shortly.',
+                );
+              "
+            >
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Full Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white transition-colors"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="company"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Company Name</label
+                  >
+                  <input
+                    type="text"
+                    id="company"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white transition-colors"
+                    placeholder="Acme Corp"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Business Email *</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white transition-colors"
+                    placeholder="john@company.com"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white transition-colors"
+                    placeholder="+1 (555) 000-0000"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="service"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Service Required *</label
+                >
+                <select
+                  id="service"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white transition-colors text-gray-700"
+                >
+                  <option value="">Select a service...</option>
+                  <option value="web">Web Development</option>
+                  <option value="mobile">Mobile App Development</option>
+                  <option value="custom_software">Custom Software Dev</option>
+                  <option value="ecommerce">E-commerce Solution</option>
+                  <option value="digital_marketing">
+                    Digital Marketing / SEO
+                  </option>
+                  <option value="ui_ux">UI/UX Design</option>
+                  <option value="other">Other / Not Sure</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Project Details *</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white transition-colors resize-none"
+                  placeholder="Briefly describe your project requirements and goals..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-deepblue hover:bg-gray-800 text-white py-4 rounded-lg font-bold text-lg transition-all shadow-md hover:shadow-xl flex justify-center items-center gap-2"
+              >
+                Send Message <i data-lucide="send" class="w-5 h-5"></i>
+              </button>
+              <p class="text-xs text-center text-gray-500 mt-3">
+                <i data-lucide="lock" class="w-3 h-3 inline mr-1"></i> Your
+                information is secure and will never be shared.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#051120] text-gray-300 py-12 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <!-- Brand -->
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <!-- <div
+                class="w-8 h-8 bg-brightblue rounded flex items-center justify-center"
+              >
+                <i data-lucide="code-2" class="text-white w-5 h-5"></i>
+              </div>
+              <span class="font-bold text-xl text-white tracking-tight"
+                >Suretek<span class="text-primaryRed">.</span></span
+              > -->
+              <img
+                src="https://www.suretekinfosoft.com/assets/images/logo-white.png"
+                alt="logo"
+                class="max-w-[130px] w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+              Premium IT & Digital solutions designed to scale your business.
+              Quality development, strategic pricing.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-brightblue hover:text-white transition-colors"
+                ><i data-lucide="linkedin" class="w-4 h-4"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-brightblue hover:text-white transition-colors"
+                ><i data-lucide="twitter" class="w-4 h-4"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-brightblue hover:text-white transition-colors"
+                ><i data-lucide="facebook" class="w-4 h-4"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4
+              class="text-white font-bold mb-4 uppercase text-sm tracking-wider"
+            >
+              Company
+            </h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="#about"
+                  class="hover:text-primaryRed transition-colors font-poppins"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="hover:text-primaryRed transition-colors font-poppins"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primaryRed transition-colors font-poppins"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primaryRed transition-colors font-poppins"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primaryRed transition-colors font-poppins"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4
+              class="text-white font-bold font-poppins mb-4 uppercase text-sm tracking-wider"
+            >
+              Services
+            </h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="#services"
+                  class="hover:text-primaryRed transition-colors font-poppins"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="hover:text-primaryRed transition-colors font-poppins"
+                  >Mobile Applications</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="hover:text-primaryRed transition-colors font-poppins"
+                  >UI/UX Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="hover:text-primaryRed transition-colors font-poppins"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="hover:text-primaryRed transition-colors font-poppins"
+                  >Custom Software</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h4
+              class="text-white font-bold font-poppins mb-4 uppercase text-sm tracking-wider"
+            >
+              Contact
+            </h4>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-start gap-2">
+                <i
+                  data-lucide="map-pin"
+                  class="w-4 h-4 text-primaryRed mt-0.5"
+                ></i>
+                <span class="font-poppins">Noida, UP, India</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="mail" class="w-4 h-4 text-primaryRed"></i>
+                <a
+                  href="mailto:info@suretekinfosoft.com"
+                  class="hover:text-white transition-colors font-poppins"
+                  >info@suretekinfosoft.com</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4 text-successgreen"></i>
+                <span class="font-poppins">+1 (555) 123-4567</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500"
+        >
+          <p>&copy; 2026 Suretek Infosoft. All rights reserved.</p>
+          <p>Designed for global excellence.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+
+      // Mobile Menu Toggle
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu on link click
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+        });
+      });
+
+      // Sticky Navbar styling on scroll
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+          navbar.classList.add("shadow-md");
+          navbar.classList.replace("bg-white/90", "bg-white/95");
+        } else {
+          navbar.classList.remove("shadow-md");
+          navbar.classList.replace("bg-white/95", "bg-white/90");
+        }
+      });
+
+      // Scroll Reveal Animation with Intersection Observer
+      const revealElements = document.querySelectorAll(".reveal");
+
+      const revealOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const revealOnScroll = new IntersectionObserver(function (
+        entries,
+        observer,
+      ) {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          } else {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, revealOptions);
+
+      revealElements.forEach((el) => {
+        revealOnScroll.observe(el);
+      });
+    </script>
+
+    <script>
+      const items = document.querySelectorAll(".accordion-item");
+
+      items.forEach((item) => {
+        const header = item.querySelector(".accordion-header");
+        const content = item.querySelector(".accordion-content");
+        const icon = item.querySelector(".icon");
+
+        header.addEventListener("click", () => {
+          const isOpen =
+            content.style.maxHeight && content.style.maxHeight !== "0px";
+
+          // Close ALL items first
+          items.forEach((i) => {
+            const c = i.querySelector(".accordion-content");
+            const ic = i.querySelector(".icon");
+            const h = i.querySelector(".accordion-header");
+
+            c.style.maxHeight = null;
+            ic.textContent = "+";
+            h.classList.remove("text-primaryRed");
+            h.classList.add("text-gray-800");
+          });
+
+          if (!isOpen) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.textContent = "×";
+            header.classList.remove("text-gray-800");
+            header.classList.add("text-primaryRed");
+          }
+        });
+      });
+
+      window.addEventListener("load", () => {
+        const first = items[0];
+        const content = first.querySelector(".accordion-content");
+        const icon = first.querySelector(".icon");
+        const header = first.querySelector(".accordion-header");
+
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.textContent = "×";
+        header.classList.add("text-primaryRed");
+      });
+    </script>
+  </body>
+</html>
