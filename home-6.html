@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suretek Infosoft</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#C62828",
+            dark: "#111111",
+            lightGray: "#f5f5f5"
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"]
+          },
+          boxShadow: {
+            '3xl': '0 35px 60px -15px rgba(0,0,0,0.3)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-poppins text-gray-800 bg-white relative">
+
+<!-- NAVBAR -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 shadow-md bg-white/80 backdrop-blur-md transition-all duration-300">
+  <div class="flex items-center justify-between px-6 md:px-12 py-4">
+    <h1 class="font-bold text-xl text-primary tracking-wide">SURETEK</h1>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex items-center space-x-10 text-[15px] font-medium">
+      <a href="#home" class="nav-link relative">Home</a>
+      <a href="#services" class="nav-link relative">Services</a>
+      <a href="#case" class="nav-link relative">Case Studies</a>
+      <a href="#about" class="nav-link relative">About</a>
+      <button class="cta-btn px-5 py-2">Get Quote</button>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden flex flex-col gap-1.5">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-lg shadow-lg opacity-0 -translate-y-6 pointer-events-none transition-all duration-300">
+    <div class="flex flex-col px-6 py-6 space-y-5 text-lg font-medium">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#case" class="mobile-link">Case Studies</a>
+      <a href="#about" class="mobile-link">About</a>
+      <button class="cta-btn w-full text-center">Get Quote</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section id="home" class="relative px-6 md:px-12 pt-32 pb-20 grid md:grid-cols-2 gap-12 items-center overflow-hidden">
+  <!-- Animated Shapes -->
+  <div class="absolute -top-20 -left-20 w-60 h-60 bg-gradient-to-tr from-red-200 to-red-400 rounded-full opacity-30 animate-blob mix-blend-multiply filter blur-2xl"></div>
+  <div class="absolute -bottom-20 -right-10 w-72 h-72 bg-gradient-to-tr from-red-300 to-red-500 rounded-full opacity-30 animate-blob animation-delay-2000 mix-blend-multiply filter blur-3xl"></div>
+
+  <!-- LEFT -->
+  <div class="space-y-6 z-10">
+    <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+      We Build <span id="typing-text" class="text-primary border-r-2 border-primary pr-2 animate-pulse"></span>
+    </h2>
+    <p class="text-gray-600 text-lg max-w-lg">
+      Helping startups and businesses create secure, scalable and high-performing digital products.
+    </p>
+
+    <div class="flex flex-wrap gap-4 pt-2">
+      <button class="cta-btn ripple">Get Started</button>
+      <button class="border border-gray-300 px-6 py-3 rounded-lg hover:border-primary hover:text-primary transition">
+        View Work
+      </button>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="relative z-10">
+    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72" class="relative rounded-xl shadow-2xl animate-float hover:scale-105 transition-transform duration-500" />
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="relative bg-gray-50 py-28 px-6 md:px-20">
+  <div class="text-center max-w-3xl mx-auto space-y-3">
+    <h3 class="text-sm text-gray-400 uppercase tracking-widest">Our Expertise</h3>
+    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900">
+      Crafting Digital Experiences That <span class="text-primary">Drive Growth</span>
+    </h2>
+    <p class="text-gray-500 text-lg mt-2">
+      Suretek Infosoft delivers innovative IT solutions — from mobile apps and cloud architecture to UI/UX design — that empower businesses worldwide.
+    </p>
+  </div>
+
+  <div class="mt-20 grid md:grid-cols-3 gap-12 items-start">
+    <!-- Card -->
+    <div class="relative bg-white rounded-3xl shadow-xl p-10 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-3 group">
+      <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+        <img src="https://img.icons8.com/ios-filled/64/ff4d4d/source-code.png" class="w-20 h-20 group-hover:scale-110 transition-transform duration-500"/>
+      </div>
+      <div class="mt-16 text-center">
+        <h4 class="text-2xl font-bold text-gray-900">Custom Software Development</h4>
+        <p class="text-gray-500 mt-3">
+          Tailored software solutions designed to streamline business operations and scale with growth.
+        </p>
+      </div>
+    </div>
+
+    <div class="relative bg-white rounded-3xl shadow-xl p-10 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-3 group">
+      <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+        <img src="https://img.icons8.com/ios-filled/64/ff4d4d/mobile.png" class="w-20 h-20 group-hover:scale-110 transition-transform duration-500"/>
+      </div>
+      <div class="mt-16 text-center">
+        <h4 class="text-2xl font-bold text-gray-900">Mobile & Web Applications</h4>
+        <p class="text-gray-500 mt-3">
+          High-performance, responsive apps for iOS, Android, and web to engage customers and employees seamlessly.
+        </p>
+      </div>
+    </div>
+
+    <div class="relative bg-white rounded-3xl shadow-xl p-10 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-3 group">
+      <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+        <img src="https://img.icons8.com/ios-filled/64/ff4d4d/cloud.png" class="w-20 h-20 group-hover:scale-110 transition-transform duration-500"/>
+      </div>
+      <div class="mt-16 text-center">
+        <h4 class="text-2xl font-bold text-gray-900">Cloud & DevOps Solutions</h4>
+        <p class="text-gray-500 mt-3">
+          Automated deployments, scalable cloud infrastructure, and CI/CD pipelines for faster, reliable releases.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="px-10 py-16 grid md:grid-cols-2 gap-10 items-center bg-white">
+  <div>
+    <h2 class="text-3xl font-bold">
+      BUILD STRONGER. <span class="text-primary">INVEST SMARTER.</span>
+    </h2>
+    <ul class="mt-6 space-y-3 text-gray-600">
+      <li>✔ Premium quality</li>
+      <li>✔ Flexible pricing</li>
+      <li>✔ Long-term support</li>
+    </ul>
+    <button class="mt-6 bg-primary text-white px-6 py-3 rounded shadow-lg hover:shadow-xl transition">
+      Get Free Consultation
+    </button>
+  </div>
+  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" class="rounded-lg shadow-lg"/>
+</section>
+
+<!-- FAQ -->
+<section class="bg-lightGray py-16 px-10">
+  <h2 class="text-3xl font-bold text-center">
+    FREQUENTLY ASKED <span class="text-primary">QUESTIONS</span>
+  </h2>
+  <div class="max-w-3xl mx-auto mt-10 space-y-4">
+    <details class="bg-white p-4 rounded shadow group">
+      <summary class="font-semibold cursor-pointer group-open:text-primary transition">How much does development cost?</summary>
+      <p class="mt-2 text-gray-600">Depends on scope and requirements.</p>
+    </details>
+    <details class="bg-white p-4 rounded shadow group">
+      <summary class="font-semibold cursor-pointer group-open:text-primary transition">How long does a project take?</summary>
+      <p class="mt-2 text-gray-600">Typically 2–12 weeks.</p>
+    </details>
+    <details class="bg-white p-4 rounded shadow group">
+      <summary class="font-semibold cursor-pointer group-open:text-primary transition">Do you provide support?</summary>
+      <p class="mt-2 text-gray-600">Yes, long-term support included.</p>
+    </details>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white px-10 py-10">
+  <div class="grid md:grid-cols-4 gap-8">
+    <div>
+      <h4 class="font-bold">Suretek Infosoft</h4>
+      <p class="text-sm mt-2 text-gray-400">Building digital solutions.</p>
+    </div>
+    <div>
+      <h4 class="font-semibold">Services</h4>
+      <ul class="text-sm text-gray-400 mt-2 space-y-1">
+        <li>Web Development</li>
+        <li>Mobile Apps</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold">Company</h4>
+      <ul class="text-sm text-gray-400 mt-2 space-y-1">
+        <li>About</li>
+        <li>Careers</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold">Contact</h4>
+      <p class="text-sm text-gray-400 mt-2">info@suretek.com</p>
+    </div>
+  </div>
+  <p class="text-center text-gray-500 mt-10 text-sm">© 2025 Suretek Infosoft</p>
+</footer>
+
+<style>
+/* FLOATING ANIMATION */
+@keyframes float {0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+.animate-float {animation: float 4s ease-in-out infinite;}
+
+/* TYPING EFFECT handled in JS */
+
+/* CTA BUTTON */
+.cta-btn {background:#C62828;color:white;padding:12px 22px;border-radius:10px;transition:0.3s;}
+.cta-btn:hover {transform:translateY(-2px) scale(1.05);box-shadow:0 12px 25px rgba(198,40,40,0.35);}
+
+/* NAV LINKS */
+.nav-link {position:relative;transition:0.3s;}
+.nav-link::after {content:"";position:absolute;left:0;bottom:-6px;width:0%;height:2px;background:#C62828;transition:0.3s;}
+.nav-link:hover::after {width:100%;}
+
+/* MOBILE LINKS */
+.mobile-link {transition:0.3s;}
+.mobile-link:hover {color:#C62828;transform:translateX(6px);}
+
+/* HAMBURGER */
+.line {width:24px;height:2px;background:black;transition:0.3s;}
+
+/* BLOB ANIMATION */
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+.animate-blob { animation: blob 7s infinite; }
+.animation-delay-2000 { animation-delay: 2s; }
+</style>
+
+<script>
+/* TYPING EFFECT */
+const words = ["Web Applications","Mobile Apps","Scalable Systems","Modern UI/UX","Digital Experiences"];
+let i = 0, j = 0, currentWord="", isDeleting=false;
+const typingElement = document.getElementById("typing-text");
+function type() {
+  currentWord = words[i];
+  typingElement.textContent = isDeleting ? currentWord.substring(0,j--) : currentWord.substring(0,j++);
+  let speed = isDeleting ? 50 : 100;
+  if(!isDeleting && j===currentWord.length){speed=1500;isDeleting=true;}
+  else if(isDeleting && j===0){isDeleting=false;i=(i+1)%words.length;speed=300;}
+  setTimeout(type,speed);
+}
+type();
+
+/* MOBILE MENU */
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+let isOpen = false;
+menuBtn.addEventListener("click", e => { e.stopPropagation(); isOpen=!isOpen; isOpen ? openMenu() : closeMenu(); });
+function openMenu(){ mobileMenu.classList.remove("opacity-0","-translate-y-6","pointer-events-none"); mobileMenu.classList.add("opacity-100","translate-y-0"); }
+function closeMenu(){ mobileMenu.classList.add("opacity-0","-translate-y-6","pointer-events-none"); mobileMenu.classList.remove("opacity-100","translate-y-0"); isOpen=false; }
+document.addEventListener("click", e => { if(!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) closeMenu(); });
+document.querySelectorAll("#mobile-menu a, #mobile-menu button").forEach(el => { el.addEventListener("click", closeMenu); });
+window.addEventListener("resize", () => { if(window.innerWidth>=768) closeMenu(); });
+</script>
+
+</body>
+</html>

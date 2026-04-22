@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Suretek Infosoft — Digital Strength for Uncertain Times</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --primary: #a22426;
+  --primary-dark: #7c1b1d;
+  --primary-mid: #be2d30;
+  --secondary: #f3f3f3;
+  --text: #222;
+  --bg: #fff;
+  --muted: #6b6b6b;
+  --border: rgba(0,0,0,0.07);
+  --red-tint: rgba(162,36,38,0.06);
+  --red-tint2: rgba(162,36,38,0.10);
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--secondary); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 2px; }
+
+/* ─── NAVBAR ─── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  padding: 0 6%;
+  height: 70px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.3s var(--ease);
+}
+.nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.07); }
+.logo {
+  display: flex; align-items: center; gap: 10px;
+}
+.logo-mark {
+  width: 32px; height: 32px; background: var(--primary);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-mark span { color: #fff; font-family: 'Teko', sans-serif; font-size: 16px; font-weight: 700; }
+.logo-text { font-family: 'Teko', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: 0.08em; color: var(--text); }
+.logo-text strong { color: var(--primary); }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a { font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: 0.03em; transition: color 0.2s; }
+.nav-links a:hover { color: var(--primary); }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.nav-btn-ghost {
+  font-size: 13px; font-weight: 500; color: var(--text);
+  padding: 8px 20px; border: 1.5px solid rgba(0,0,0,0.12);
+  border-radius: 3px; cursor: pointer; background: transparent;
+  transition: all 0.2s; font-family: 'Poppins', sans-serif;
+  text-decoration: none; display: inline-flex; align-items: center;
+}
+.nav-btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
+.nav-btn-fill {
+  font-size: 13px; font-weight: 600; color: #fff;
+  padding: 8px 22px; background: var(--primary);
+  border: none; border-radius: 3px; cursor: pointer;
+  transition: background 0.2s; font-family: 'Poppins', sans-serif;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+}
+.nav-btn-fill:hover { background: var(--primary-dark); }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 110px 6% 80px;
+  position: relative; overflow: hidden;
+  background: var(--bg);
+}
+.hero-geo {
+  position: absolute; inset: 0; pointer-events: none; overflow: hidden;
+}
+.hero-geo svg { position: absolute; top: 0; right: 0; width: 55%; height: 100%; }
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--primary);
+  margin-bottom: 24px;
+  opacity: 0; animation: slideUp 0.7s 0.1s var(--ease) forwards;
+}
+.hero-eyebrow::before {
+  content: ''; display: block; width: 28px; height: 2px; background: var(--primary);
+}
+.hero h1 {
+  font-family: 'Teko', sans-serif;
+  font-size: clamp(52px, 7vw, 96px);
+  font-weight: 700; letter-spacing: 0.02em;
+  line-height: 0.92; text-transform: uppercase; color: var(--text);
+  margin-bottom: 28px;
+  opacity: 0; animation: slideUp 0.7s 0.2s var(--ease) forwards;
+}
+.hero h1 .accent { color: var(--primary); }
+.hero h1 .outline-text {
+  -webkit-text-stroke: 2px var(--text);
+  color: transparent;
+}
+.hero-body {
+  font-size: 15px; line-height: 1.75; color: var(--muted);
+  max-width: 440px; margin-bottom: 40px;
+  opacity: 0; animation: slideUp 0.7s 0.3s var(--ease) forwards;
+}
+.hero-actions {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  opacity: 0; animation: slideUp 0.7s 0.4s var(--ease) forwards;
+}
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--primary); color: #fff;
+  padding: 15px 32px; border-radius: 3px;
+  font-size: 14px; font-weight: 600; letter-spacing: 0.04em;
+  border: none; cursor: pointer; font-family: 'Poppins', sans-serif;
+  transition: all 0.25s var(--ease);
+  text-decoration: none; position: relative; overflow: hidden;
+}
+.btn-primary::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(255,255,255,0.1); opacity: 0;
+  transition: opacity 0.2s;
+}
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(162,36,38,0.3); }
+.btn-primary:hover::after { opacity: 1; }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--text);
+  padding: 14px 28px; border-radius: 3px;
+  font-size: 14px; font-weight: 500; border: 1.5px solid rgba(0,0,0,0.14);
+  cursor: pointer; font-family: 'Poppins', sans-serif;
+  transition: all 0.25s var(--ease); text-decoration: none;
+}
+.btn-ghost:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+
+.hero-right {
+  position: relative; padding-left: 48px;
+  opacity: 0; animation: fadeIn 0.9s 0.35s var(--ease) forwards;
+}
+.hero-card-stack { position: relative; }
+.hcard {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: 12px; padding: 24px 28px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.hcard:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(162,36,38,0.1); }
+.hcard-main { position: relative; z-index: 2; margin-bottom: 16px; }
+.hcard-secondary {
+  position: relative; z-index: 1; margin-left: 32px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+.hcard-mini {
+  background: var(--secondary); border-radius: 10px;
+  padding: 18px 20px; border: 1px solid var(--border);
+}
+.hcard-mini:hover { background: var(--red-tint); border-color: rgba(162,36,38,0.15); }
+.kpi-label { font-size: 11px; color: var(--muted); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 4px; }
+.kpi-val { font-family: 'Teko', sans-serif; font-size: 40px; font-weight: 700; color: var(--primary); line-height: 1; }
+.kpi-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.hcard-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.hcard-title { font-family: 'Teko', sans-serif; font-size: 28px; font-weight: 600; color: var(--text); line-height: 1.1; margin-bottom: 12px; }
+.hcard-bar-wrap { background: var(--secondary); border-radius: 4px; height: 5px; overflow: hidden; margin-bottom: 4px; }
+.hcard-bar { height: 100%; border-radius: 4px; background: var(--primary); animation: barGrow 1.5s 1s var(--ease) both; }
+@keyframes barGrow { from { width: 0 !important; } }
+.hcard-bar-label { font-size: 11px; color: var(--muted); display: flex; justify-content: space-between; }
+.hcard-status {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(34,197,94,0.1); color: #16a34a;
+  font-size: 11px; font-weight: 600; padding: 4px 10px;
+  border-radius: 100px; margin-top: 12px;
+}
+.hcard-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #16a34a; animation: pulse 1.5s ease infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)} }
+
+/* ─── TRUST STRIP ─── */
+.trust {
+  background: var(--text); padding: 0 6%;
+  display: flex; align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; gap: 0;
+  overflow: hidden;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 22px 0;
+  font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.6);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  flex: 1; justify-content: center;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  transition: color 0.2s;
+}
+.trust-item:last-child { border-right: none; }
+.trust-item:hover { color: rgba(255,255,255,0.95); }
+.trust-num { font-family: 'Teko', sans-serif; font-size: 26px; font-weight: 700; color: var(--primary); }
+
+/* ─── SECTION SKELETON ─── */
+.section { padding: 100px 6%; }
+.section.alt { background: var(--secondary); }
+.section.dark { background: var(--text); }
+.section-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--primary);
+  margin-bottom: 18px;
+}
+.section-tag::before { content: ''; width: 20px; height: 2px; background: var(--primary); }
+.section-h {
+  font-family: 'Teko', sans-serif;
+  font-size: clamp(40px, 5.5vw, 68px);
+  font-weight: 700; letter-spacing: 0.02em;
+  text-transform: uppercase; line-height: 0.95;
+  color: var(--text); margin-bottom: 18px;
+}
+.section-h .red { color: var(--primary); }
+.section-p { font-size: 15px; color: var(--muted); line-height: 1.75; max-width: 500px; }
+.center { text-align: center; }
+.center .section-tag { justify-content: center; }
+.center .section-tag::before { display: none; }
+.center .section-p { margin: 0 auto; }
+
+/* ─── DIAGONAL DIVIDER ─── */
+.divider {
+  height: 80px; background: var(--secondary);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 20%);
+  margin-top: -1px;
+}
+.divider.white { background: var(--bg); }
+.divider.dark { background: var(--text); }
+.divider.flip { clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%); }
+
+/* ─── INITIATIVE ─── */
+.initiative-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  align-items: center;
+}
+.initiative-left { }
+.initiative-left .section-p { margin-bottom: 36px; }
+.initiative-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #fff; border: 1px solid var(--border);
+  padding: 8px 16px; border-radius: 100px;
+  font-size: 12px; font-weight: 500; color: var(--text);
+  transition: all 0.2s; cursor: default;
+}
+.pill:hover { border-color: var(--primary); color: var(--primary); }
+.pill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--primary); }
+.initiative-right {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.07);
+}
+.init-header {
+  background: var(--primary); padding: 32px 36px;
+  position: relative; overflow: hidden;
+}
+.init-header::before {
+  content: '';
+  position: absolute; top: -30px; right: -30px;
+  width: 120px; height: 120px; border-radius: 50%;
+  border: 24px solid rgba(255,255,255,0.08);
+}
+.init-header-title {
+  font-family: 'Teko', sans-serif; font-size: 34px; font-weight: 700;
+  color: #fff; text-transform: uppercase; letter-spacing: 0.04em;
+}
+.init-header-sub { font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 4px; }
+.init-body { padding: 32px 36px; }
+.init-row {
+  display: flex; align-items: center; gap: 16px;
+  padding: 14px 0; border-bottom: 1px solid var(--border);
+}
+.init-row:last-child { border-bottom: none; }
+.init-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--red-tint); display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0;
+  font-size: 18px;
+}
+.init-row-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.init-row-desc { font-size: 12px; color: var(--muted); }
+
+/* ─── SERVICES ─── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border); border-radius: 16px;
+  overflow: hidden;
+  margin-top: 60px;
+}
+.svc-card {
+  background: #fff; padding: 40px 32px;
+  position: relative; overflow: hidden;
+  transition: all 0.3s var(--ease); cursor: default;
+}
+.svc-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--primary);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.35s var(--ease);
+}
+.svc-card:hover { background: var(--red-tint); }
+.svc-card:hover::before { transform: scaleX(1); }
+.svc-card:hover .svc-icon-wrap { background: var(--primary); }
+.svc-card:hover .svc-icon-wrap svg { color: #fff; }
+.svc-icon-wrap {
+  width: 52px; height: 52px; border-radius: 12px;
+  background: var(--secondary); display: flex; align-items: center;
+  justify-content: center; margin-bottom: 20px;
+  transition: background 0.3s;
+}
+.svc-icon-wrap svg { width: 24px; height: 24px; color: var(--primary); transition: color 0.3s; }
+.svc-title { font-family: 'Teko', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: 0.03em; margin-bottom: 10px; }
+.svc-desc { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+.svc-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.svc-tag {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--primary);
+  background: var(--red-tint); padding: 3px 10px; border-radius: 2px;
+}
+.svc-card:hover .svc-tag { background: rgba(162,36,38,0.15); }
+
+/* ─── VALUE PROP ─── */
+.value-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+}
+.value-left .section-h { margin-bottom: 24px; }
+.value-left .section-p { margin-bottom: 40px; }
+.value-features {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.vf {
+  padding: 24px; border-radius: 10px;
+  background: var(--secondary); border: 1px solid var(--border);
+  transition: all 0.25s;
+}
+.vf:hover { background: var(--red-tint); border-color: rgba(162,36,38,0.15); transform: translateY(-3px); }
+.vf-num { font-family: 'Teko', sans-serif; font-size: 44px; font-weight: 700; color: var(--primary); line-height: 1; }
+.vf-label { font-size: 13px; font-weight: 500; color: var(--text); margin-top: 4px; }
+.vf-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.value-right { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.vr-card {
+  display: flex; gap: 20px; align-items: flex-start;
+  background: #fff; border: 1px solid var(--border);
+  border-radius: 12px; padding: 24px;
+  transition: all 0.25s; cursor: default;
+}
+.vr-card:hover { box-shadow: 0 8px 32px rgba(162,36,38,0.09); transform: translateX(6px); }
+.vr-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: var(--red-tint); display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; font-size: 20px;
+}
+.vr-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.vr-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* ─── OFFER ─── */
+.offer-wrap {
+  background: var(--secondary); border-radius: 20px;
+  padding: 64px; position: relative; overflow: hidden;
+  border: 1px solid rgba(162,36,38,0.08);
+}
+.offer-wrap::before {
+  content: '';
+  position: absolute; top: 0; left: 0; bottom: 0; width: 5px;
+  background: var(--primary);
+}
+.offer-wrap::after {
+  content: 'SPECIAL OFFER';
+  position: absolute; top: 32px; right: -28px;
+  transform: rotate(90deg);
+  font-family: 'Teko', sans-serif; font-size: 72px; font-weight: 700;
+  letter-spacing: 0.04em; color: rgba(162,36,38,0.05);
+  pointer-events: none;
+}
+.offer-grid {
+  display: grid; grid-template-columns: 1fr auto; gap: 60px;
+  align-items: center;
+}
+.offer-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--primary); color: #fff;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 6px 16px; border-radius: 2px;
+  margin-bottom: 20px;
+}
+.offer-h { font-family: 'Teko', sans-serif; font-size: clamp(36px, 5vw, 56px); font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; line-height: 1; margin-bottom: 16px; }
+.offer-p { font-size: 14px; color: var(--muted); line-height: 1.75; max-width: 520px; margin-bottom: 28px; }
+.offer-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+.offer-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 500;
+}
+.offer-item::before {
+  content: ''; width: 18px; height: 18px; border-radius: 50%;
+  background: rgba(162,36,38,0.1); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23a22426' stroke-width='3'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: center; background-size: 10px;
+}
+.offer-cta-wrap { text-align: center; }
+.offer-price { font-family: 'Teko', sans-serif; font-size: 88px; font-weight: 700; color: var(--primary); line-height: 1; }
+.offer-price-label { font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+.offer-note { font-size: 11px; color: var(--muted); margin-top: 12px; max-width: 160px; text-align: center; line-height: 1.5; }
+
+/* ─── TESTIMONIALS ─── */
+.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px; }
+.testi {
+  background: #fff; border: 1px solid var(--border); border-radius: 14px;
+  padding: 32px; position: relative; overflow: hidden;
+  transition: all 0.3s var(--ease);
+}
+.testi::before {
+  content: '\201C';
+  position: absolute; top: -10px; right: 20px;
+  font-size: 100px; line-height: 1; color: var(--red-tint2);
+  font-family: Georgia, serif; pointer-events: none;
+}
+.testi:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(162,36,38,0.1); border-color: rgba(162,36,38,0.15); }
+.testi-stars { display: flex; gap: 2px; margin-bottom: 16px; }
+.testi-stars span { color: #f59e0b; font-size: 14px; }
+.testi-body { font-size: 14px; color: var(--text); line-height: 1.75; margin-bottom: 24px; font-style: italic; }
+.testi-author { display: flex; align-items: center; gap: 12px; }
+.testi-av {
+  width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Teko', sans-serif; font-size: 16px; font-weight: 700; color: #fff;
+}
+.testi-name { font-size: 14px; font-weight: 600; }
+.testi-role { font-size: 11px; color: var(--muted); }
+.testi-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: var(--red-tint); color: var(--primary);
+  font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 3px 10px; border-radius: 2px;
+  margin-top: 14px;
+}
+
+/* ─── CTA BANNER ─── */
+.cta-banner {
+  background: var(--primary); position: relative;
+  overflow: hidden; padding: 100px 6%; text-align: center;
+}
+.cta-banner::before {
+  content: '';
+  position: absolute; top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 800px; border-radius: 50%;
+  border: 100px solid rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+.cta-banner::after {
+  content: '';
+  position: absolute; bottom: -60px; right: -60px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  border: 40px solid rgba(255,255,255,0.05);
+  pointer-events: none;
+}
+.cta-banner .section-tag { color: rgba(255,255,255,0.6); }
+.cta-banner .section-tag::before { background: rgba(255,255,255,0.4); }
+.cta-banner .section-h { color: #fff; margin-bottom: 18px; }
+.cta-banner .section-p { color: rgba(255,255,255,0.72); margin: 0 auto 48px; }
+.cta-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.btn-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; color: var(--primary);
+  padding: 15px 36px; border-radius: 3px;
+  font-size: 14px; font-weight: 700; letter-spacing: 0.04em;
+  border: none; cursor: pointer; font-family: 'Poppins', sans-serif;
+  transition: all 0.25s var(--ease); text-decoration: none;
+}
+.btn-white:hover { background: var(--secondary); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+.btn-outline-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: #fff;
+  padding: 14px 32px; border-radius: 3px;
+  font-size: 14px; font-weight: 500;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  cursor: pointer; font-family: 'Poppins', sans-serif;
+  transition: all 0.25s; text-decoration: none;
+}
+.btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+/* ─── FOOTER ─── */
+footer {
+  background: #111; color: #aaa;
+  padding: 72px 6% 32px;
+}
+.footer-top {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px; margin-bottom: 56px;
+}
+.footer-logo { margin-bottom: 16px; }
+.footer-desc { font-size: 13px; line-height: 1.8; color: #666; max-width: 280px; margin-bottom: 24px; }
+.socials { display: flex; gap: 8px; }
+.social {
+  width: 34px; height: 34px; border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: #666;
+  transition: all 0.2s; text-decoration: none;
+}
+.social:hover { border-color: var(--primary); color: var(--primary); }
+.footer-h { font-family: 'Teko', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; margin-bottom: 20px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13px; color: #666; text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--primary); }
+.footer-contact { display: flex; flex-direction: column; gap: 12px; }
+.fc-item { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: #666; }
+.fc-icon { color: var(--primary); font-style: normal; flex-shrink: 0; width: 16px; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 28px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+}
+.footer-bottom p { font-size: 12px; color: #444; }
+.footer-bottom a { color: var(--primary); text-decoration: none; }
+
+/* ─── SCROLL REVEAL ─── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s var(--ease), transform 0.65s var(--ease); }
+.reveal.up { opacity: 1; transform: translateY(0); }
+.reveal-left { opacity: 0; transform: translateX(-28px); transition: opacity 0.65s var(--ease), transform 0.65s var(--ease); }
+.reveal-left.up { opacity: 1; transform: translateX(0); }
+.reveal-right { opacity: 0; transform: translateX(28px); transition: opacity 0.65s var(--ease), transform 0.65s var(--ease); }
+.reveal-right.up { opacity: 1; transform: translateX(0); }
+.delay-1 { transition-delay: 0.1s !important; }
+.delay-2 { transition-delay: 0.2s !important; }
+.delay-3 { transition-delay: 0.3s !important; }
+.delay-4 { transition-delay: 0.4s !important; }
+.delay-5 { transition-delay: 0.5s !important; }
+
+@keyframes slideUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+/* ─── RESPONSIVE ─── */
+@media(max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; padding-top: 100px; }
+  .hero-geo { display: none; }
+  .hero-right { padding-left: 0; margin-top: 48px; }
+  .initiative-grid, .value-grid { grid-template-columns: 1fr; gap: 48px; }
+  .offer-grid { grid-template-columns: 1fr; }
+  .offer-cta-wrap { text-align: left; }
+  .testi-grid { grid-template-columns: 1fr 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+@media(max-width: 700px) {
+  .nav-links { display: none; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .hcard-secondary { grid-template-columns: 1fr; margin-left: 0; }
+  .value-features { grid-template-columns: 1fr 1fr; }
+  .footer-top { grid-template-columns: 1fr; }
+  .trust { flex-direction: column; gap: 0; }
+  .trust-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="logo">
+    <div class="logo-mark"><span>S</span></div>
+    <div class="logo-text">SURETEK <strong>INFOSOFT</strong></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#initiative">Initiative</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#value">Why Us</a></li>
+    <li><a href="#offer">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#offer" class="nav-btn-ghost">View Plans</a>
+    <a href="#cta" class="nav-btn-fill">
+      Get Started
+      <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-geo">
+    <svg viewBox="0 0 600 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <!-- Geometric grid lines -->
+      <line x1="0" y1="100" x2="600" y2="100" stroke="rgba(162,36,38,0.06)" stroke-width="1"/>
+      <line x1="0" y1="200" x2="600" y2="200" stroke="rgba(162,36,38,0.06)" stroke-width="1"/>
+      <line x1="0" y1="300" x2="600" y2="300" stroke="rgba(162,36,38,0.06)" stroke-width="1"/>
+      <line x1="0" y1="400" x2="600" y2="400" stroke="rgba(162,36,38,0.06)" stroke-width="1"/>
+      <line x1="0" y1="500" x2="600" y2="500" stroke="rgba(162,36,38,0.06)" stroke-width="1"/>
+      <line x1="0" y1="600" x2="600" y2="600" stroke="rgba(162,36,38,0.06)" stroke-width="1"/>
+      <line x1="0" y1="700" x2="600" y2="700" stroke="rgba(162,36,38,0.06)" stroke-width="1"/>
+      <line x1="100" y1="0" x2="100" y2="800" stroke="rgba(162,36,38,0.06)" stroke-width="1"/>
+      <line x1="200" y1="0" x2="200" y2="800" stroke="rgba(162,36,38,0.06)" stroke-width="1"/>
+      <line x1="300" y1="0" x2="300" y2="800" stroke="rgba(162,36,38,0.06)" stroke-width="1"/>
+      <line x1="400" y1="0" x2="400" y2="800" stroke="rgba(162,36,38,0.06)" stroke-width="1"/>
+      <line x1="500" y1="0" x2="500" y2="800" stroke="rgba(162,36,38,0.06)" stroke-width="1"/>
+      <!-- Accent shapes -->
+      <rect x="80" y="80" width="120" height="120" stroke="rgba(162,36,38,0.08)" stroke-width="1.5" fill="none"/>
+      <rect x="90" y="90" width="100" height="100" stroke="rgba(162,36,38,0.05)" stroke-width="1" fill="none"/>
+      <circle cx="400" cy="400" r="160" stroke="rgba(162,36,38,0.05)" stroke-width="1" fill="none"/>
+      <circle cx="400" cy="400" r="120" stroke="rgba(162,36,38,0.06)" stroke-width="1.5" fill="none"/>
+      <circle cx="400" cy="400" r="80" stroke="rgba(162,36,38,0.08)" stroke-width="1" fill="none"/>
+      <polygon points="300,200 500,200 500,500 300,500" stroke="rgba(162,36,38,0.04)" stroke-width="1" fill="rgba(162,36,38,0.015)"/>
+      <!-- Dots -->
+      <circle cx="100" cy="100" r="4" fill="rgba(162,36,38,0.2)"/>
+      <circle cx="200" cy="100" r="3" fill="rgba(162,36,38,0.12)"/>
+      <circle cx="300" cy="200" r="4" fill="rgba(162,36,38,0.2)"/>
+      <circle cx="400" cy="300" r="3" fill="rgba(162,36,38,0.12)"/>
+      <circle cx="500" cy="100" r="4" fill="rgba(162,36,38,0.18)"/>
+      <circle cx="100" cy="400" r="3" fill="rgba(162,36,38,0.1)"/>
+      <circle cx="500" cy="500" r="4" fill="rgba(162,36,38,0.2)"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Crisis Support Initiative 2025</div>
+    <h1>
+      Digital<br>
+      <span class="accent">Strength</span><br>
+      For <span class="outline-text">Uncertain</span><br>
+      Times
+    </h1>
+    <p class="hero-body">
+      As global challenges reshape business landscapes, Suretek Infosoft delivers premium digital solutions at accessible prices — helping your business adapt, compete, and grow with confidence.
+    </p>
+    <div class="hero-actions">
+      <a href="#cta" class="btn-primary">
+        Get Started Free
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#services" class="btn-ghost">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        Explore Services
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-card-stack">
+      <div class="hcard hcard-main">
+        <div class="hcard-label">Active Projects</div>
+        <div class="hcard-title">Q2 2025 Growth Dashboard</div>
+        <div class="hcard-bar-wrap"><div class="hcard-bar" style="width:78%"></div></div>
+        <div class="hcard-bar-label"><span>Project Delivery Rate</span><span>78%</span></div>
+        <div class="hcard-bar-wrap" style="margin-top:8px"><div class="hcard-bar" style="width:94%;animation-delay:1.2s"></div></div>
+        <div class="hcard-bar-label"><span>Client Satisfaction</span><span>94%</span></div>
+        <div class="hcard-status">All systems operational</div>
+      </div>
+      <div class="hcard-secondary">
+        <div class="hcard hcard-mini">
+          <div class="kpi-label">Projects Delivered</div>
+          <div class="kpi-val">500+</div>
+          <div class="kpi-sub">Across 20+ countries</div>
+        </div>
+        <div class="hcard hcard-mini">
+          <div class="kpi-label">Avg. Turnaround</div>
+          <div class="kpi-val">14d</div>
+          <div class="kpi-sub">From brief to live</div>
+        </div>
+        <div class="hcard hcard-mini">
+          <div class="kpi-label">Cost Savings</div>
+          <div class="kpi-val">60%</div>
+          <div class="kpi-sub">vs. agency average</div>
+        </div>
+        <div class="hcard hcard-mini">
+          <div class="kpi-label">Support SLA</div>
+          <div class="kpi-val">24/7</div>
+          <div class="kpi-sub">Dedicated team</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="trust-item">
+    <span class="trust-num">500+</span>
+    Projects Delivered
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">98%</span>
+    Client Retention
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">20+</span>
+    Countries Served
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">10+</span>
+    Years of Expertise
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">40+</span>
+    Expert Team Members
+  </div>
+</div>
+
+<!-- INITIATIVE -->
+<section class="section alt" id="initiative">
+  <div class="initiative-grid">
+    <div class="initiative-left reveal-left">
+      <div class="section-tag">Our Initiative</div>
+      <h2 class="section-h">Smart Digital<br>Investment in<br><span class="red">Tough Times</span></h2>
+      <p class="section-p">
+        Global uncertainty doesn't pause your competitors. We've restructured our entire pricing model to ensure businesses of every size can access enterprise-grade digital solutions — without compromising on quality, speed, or strategy.
+      </p>
+      <div class="initiative-pills">
+        <span class="pill"><span class="pill-dot"></span>No hidden fees</span>
+        <span class="pill"><span class="pill-dot"></span>Free onboarding</span>
+        <span class="pill"><span class="pill-dot"></span>Flexible billing</span>
+        <span class="pill"><span class="pill-dot"></span>NDA protected</span>
+        <span class="pill"><span class="pill-dot"></span>Cancel anytime</span>
+        <span class="pill"><span class="pill-dot"></span>Free strategy call</span>
+      </div>
+      <a href="#cta" class="btn-primary">
+        Start Your Journey
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="initiative-right reveal-right">
+      <div class="init-header">
+        <div class="init-header-title">Crisis Support Plan</div>
+        <div class="init-header-sub">Suretek Infosoft — Active since January 2025</div>
+      </div>
+      <div class="init-body">
+        <div class="init-row">
+          <div class="init-icon">💡</div>
+          <div>
+            <div class="init-row-title">Reduced Pricing for SMEs</div>
+            <div class="init-row-desc">Up to 60% below standard agency rates — same premium quality, more accessible investment.</div>
+          </div>
+        </div>
+        <div class="init-row">
+          <div class="init-icon">📋</div>
+          <div>
+            <div class="init-row-title">Milestone-Based Payments</div>
+            <div class="init-row-desc">Pay as deliverables are completed. No large upfront costs, no financial strain.</div>
+          </div>
+        </div>
+        <div class="init-row">
+          <div class="init-icon">⚡</div>
+          <div>
+            <div class="init-row-title">Priority Fast-Track Delivery</div>
+            <div class="init-row-desc">Accelerated workflows mean your product goes live in weeks, not months.</div>
+          </div>
+        </div>
+        <div class="init-row">
+          <div class="init-icon">🤝</div>
+          <div>
+            <div class="init-row-title">Dedicated Partnership Model</div>
+            <div class="init-row-desc">A senior account manager assigned to your business from day one.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGONAL DIVIDER -->
+<div class="divider white"></div>
+
+<!-- SERVICES -->
+<section class="section" id="services" style="padding-top:20px">
+  <div class="center reveal">
+    <div class="section-tag">What We Build</div>
+    <h2 class="section-h">Services Designed<br>for <span class="red">Growth</span></h2>
+    <p class="section-p">Every service is engineered for measurable impact — delivered fast, built to scale, priced for reality.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="svc-card reveal delay-1">
+      <div class="svc-icon-wrap">
+        <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <div class="svc-title">Web Development</div>
+      <p class="svc-desc">Custom websites and web applications built with modern frameworks. Fast, secure, and conversion-optimised from the ground up.</p>
+      <div class="svc-tags"><span class="svc-tag">From $299</span><span class="svc-tag">7–14 Days</span><span class="svc-tag">2× Conversions</span></div>
+    </div>
+
+    <div class="svc-card reveal delay-2">
+      <div class="svc-icon-wrap">
+        <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+      </div>
+      <div class="svc-title">App Development</div>
+      <p class="svc-desc">Native-quality iOS and Android applications built cross-platform for cost efficiency without sacrificing user experience.</p>
+      <div class="svc-tags"><span class="svc-tag">MVP in 4 Weeks</span><span class="svc-tag">iOS + Android</span><span class="svc-tag">Full Support</span></div>
+    </div>
+
+    <div class="svc-card reveal delay-3">
+      <div class="svc-icon-wrap">
+        <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <div class="svc-title">Digital Marketing</div>
+      <p class="svc-desc">Data-driven SEO, PPC, and social media strategies that drive qualified traffic and deliver measurable return on investment.</p>
+      <div class="svc-tags"><span class="svc-tag">3× Avg Traffic</span><span class="svc-tag">ROI-First</span><span class="svc-tag">Monthly Reports</span></div>
+    </div>
+
+    <div class="svc-card reveal delay-4">
+      <div class="svc-icon-wrap">
+        <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="svc-title">UI/UX Design</div>
+      <p class="svc-desc">Research-backed interfaces that users love. Wireframes to polished high-fidelity prototypes, validated before a single line of code.</p>
+      <div class="svc-tags"><span class="svc-tag">User-Tested</span><span class="svc-tag">Rapid Prototyping</span><span class="svc-tag">40% Retention+</span></div>
+    </div>
+
+    <div class="svc-card reveal delay-5">
+      <div class="svc-icon-wrap">
+        <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+      </div>
+      <div class="svc-title">IT Consulting</div>
+      <p class="svc-desc">Strategic technology guidance to modernise your infrastructure, reduce costs, and build a scalable digital roadmap.</p>
+      <div class="svc-tags"><span class="svc-tag">Free Audit</span><span class="svc-tag">Senior Advisors</span><span class="svc-tag">Roadmap Delivery</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DIAGONAL DIVIDER -->
+<div class="divider flip"></div>
+
+<!-- VALUE PROP -->
+<section class="section alt" id="value" style="padding-top:40px">
+  <div class="value-grid">
+    <div class="value-left reveal-left">
+      <div class="section-tag">Why Choose Us</div>
+      <h2 class="section-h">Premium Quality.<br><span class="red">Accessible</span><br>Pricing.</h2>
+      <p class="section-p">We've rebuilt our delivery model from the ground up to eliminate inefficiency and pass the savings to you — without ever cutting corners on what matters.</p>
+      <div class="value-features">
+        <div class="vf reveal delay-1">
+          <div class="vf-num">60%</div>
+          <div class="vf-label">Lower Than Agency Average</div>
+          <div class="vf-sub">Same senior talent, leaner model</div>
+        </div>
+        <div class="vf reveal delay-2">
+          <div class="vf-num">14d</div>
+          <div class="vf-label">Average Delivery Time</div>
+          <div class="vf-sub">From kickoff to live product</div>
+        </div>
+        <div class="vf reveal delay-3">
+          <div class="vf-num">98%</div>
+          <div class="vf-label">Client Satisfaction Rate</div>
+          <div class="vf-sub">Independently verified</div>
+        </div>
+        <div class="vf reveal delay-4">
+          <div class="vf-num">∞</div>
+          <div class="vf-label">Scalable Architecture</div>
+          <div class="vf-sub">Grows as your business does</div>
+        </div>
+      </div>
+    </div>
+    <div class="value-right reveal-right">
+      <div class="vr-card">
+        <div class="vr-icon">⚡</div>
+        <div>
+          <div class="vr-title">Agile, Fast Turnaround</div>
+          <div class="vr-desc">Our sprint-based workflow delivers working software every week. No lengthy discovery phases, no billable delays.</div>
+        </div>
+      </div>
+      <div class="vr-card">
+        <div class="vr-icon">🔒</div>
+        <div>
+          <div class="vr-title">Transparent & Reliable</div>
+          <div class="vr-desc">Real-time project dashboards, weekly progress reports, and a dedicated contact who answers within hours — not days.</div>
+        </div>
+      </div>
+      <div class="vr-card">
+        <div class="vr-icon">🌍</div>
+        <div>
+          <div class="vr-title">Globally Experienced</div>
+          <div class="vr-desc">20+ countries, 15+ industries. We understand diverse markets and build products that speak to your audience.</div>
+        </div>
+      </div>
+      <div class="vr-card">
+        <div class="vr-icon">📈</div>
+        <div>
+          <div class="vr-title">Results, Not Just Deliverables</div>
+          <div class="vr-desc">We measure our success by your growth metrics — traffic, conversions, retention — not just project completion.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="section" id="offer">
+  <div class="offer-wrap reveal">
+    <div class="offer-grid">
+      <div>
+        <div class="offer-tag">⚡ Limited — Crisis Support Pricing</div>
+        <h2 class="offer-h">Special Support<br>Packages</h2>
+        <p class="offer-p">
+          Designed specifically for startups, SMEs, and businesses navigating difficult conditions. These packages offer premium service with a pricing structure built around your reality — not ours.
+        </p>
+        <div class="offer-list">
+          <div class="offer-item">Full-stack web or app development included</div>
+          <div class="offer-item">UI/UX design + brand alignment</div>
+          <div class="offer-item">60-day post-launch support & maintenance</div>
+          <div class="offer-item">SEO baseline setup + analytics dashboard</div>
+          <div class="offer-item">Milestone-based payment flexibility</div>
+          <div class="offer-item">Free strategy consultation (worth $500)</div>
+        </div>
+        <a href="#cta" class="btn-primary">
+          Claim Your Package
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="offer-cta-wrap">
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Starting From</div>
+        <div class="offer-price">$199</div>
+        <div class="offer-price-label">/ month · cancel anytime</div>
+        <a href="#cta" class="btn-primary" style="width:100%;justify-content:center">
+          Get Started Today
+        </a>
+        <div class="offer-note">No commitment. Free consultation call included with every plan.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section alt" id="testimonials">
+  <div class="center reveal">
+    <div class="section-tag">Social Proof</div>
+    <h2 class="section-h">Trusted by<br><span class="red">Businesses</span> Worldwide</h2>
+    <p class="section-p">Real results from real companies who chose Suretek Infosoft as their digital growth partner.</p>
+  </div>
+  <div class="testi-grid">
+
+    <div class="testi reveal delay-1">
+      <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="testi-body">"In our most difficult quarter, Suretek built and launched our entire e-commerce platform in under three weeks. Affordable, fast, and the quality genuinely surprised us. They've become our long-term digital partners."</p>
+      <div class="testi-author">
+        <div class="testi-av" style="background:var(--primary)">RA</div>
+        <div>
+          <div class="testi-name">Rohan Agarwal</div>
+          <div class="testi-role">CEO, FreshMart India</div>
+        </div>
+      </div>
+      <span class="testi-badge">E-Commerce · Web Development</span>
+    </div>
+
+    <div class="testi reveal delay-2">
+      <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="testi-body">"Our organic traffic tripled in 60 days. The digital marketing strategy they built was sharp, data-driven, and actually delivered. The ROI has been exceptional — and the pricing was a fraction of what we'd budgeted."</p>
+      <div class="testi-author">
+        <div class="testi-av" style="background:#2d6a9f">SC</div>
+        <div>
+          <div class="testi-name">Sarah Chen</div>
+          <div class="testi-role">Marketing Director, NovaTech UK</div>
+        </div>
+      </div>
+      <span class="testi-badge">Digital Marketing · SEO</span>
+    </div>
+
+    <div class="testi reveal delay-3">
+      <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="testi-body">"As a bootstrapped startup, we needed a mobile app but couldn't afford typical agency rates. Suretek made it possible. On time, on budget, with a product our users genuinely love. I'd recommend them without hesitation."</p>
+      <div class="testi-author">
+        <div class="testi-av" style="background:#1e7e4a">MK</div>
+        <div>
+          <div class="testi-name">Mohammed Khalil</div>
+          <div class="testi-role">Founder, RideLink UAE</div>
+        </div>
+      </div>
+      <span class="testi-badge">App Development · UI/UX</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner" id="cta">
+  <div class="section-tag">Ready to Begin?</div>
+  <h2 class="section-h">Let's Build Something<br>Strong — Together</h2>
+  <p class="section-p">Your business deserves a powerful digital presence. Let's create it — affordably, quickly, and with a team that genuinely cares about your growth.</p>
+  <div class="cta-actions">
+    <a href="mailto:hello@suretekinfosoft.com" class="btn-white">
+      Request Free Consultation
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <a href="#services" class="btn-outline-white">
+      Explore Services
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">
+        <div class="logo-text" style="color:#fff">SURETEK <strong style="color:var(--primary)">INFOSOFT</strong></div>
+      </div>
+      <p class="footer-desc">Your trusted digital partner — helping businesses build resilience and achieve ambitious growth through premium, accessible technology solutions.</p>
+      <div class="socials">
+        <a href="#" class="social">in</a>
+        <a href="#" class="social">𝕏</a>
+        <a href="#" class="social">f</a>
+        <a href="#" class="social">ig</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-h">Services</div>
+      <ul class="footer-links">
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">App Development</a></li>
+        <li><a href="#">Digital Marketing</a></li>
+        <li><a href="#">UI/UX Design</a></li>
+        <li><a href="#">IT Consulting</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-h">Company</div>
+      <ul class="footer-links">
+        <li><a href="#">About Suretek</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-h">Contact</div>
+      <div class="footer-contact">
+        <div class="fc-item"><i class="fc-icon">✉</i>hello@suretekinfosoft.com</div>
+        <div class="fc-item"><i class="fc-icon">☎</i>+91 98765 43210</div>
+        <div class="fc-item"><i class="fc-icon">⌖</i>Noida, Uttar Pradesh,<br>India — 201301</div>
+        <div class="fc-item"><i class="fc-icon">🕐</i>Mon–Fri, 9AM–7PM IST<br>24/7 Emergency Support</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Suretek Infosoft Pvt. Ltd. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a> · <a href="#">Sitemap</a></p>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('up'); });
+}, { threshold: 0.08 });
+revealEls.forEach(el => io.observe(el));
+
+// Nav scroll shadow
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>

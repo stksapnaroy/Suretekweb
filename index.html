@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suretek Infosoft | Premium IT & Digital Services for US Businesses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-deep-primary { background-color: #0A2540; }
+        .text-deep-primary { color: #0A2540; }
+        .bg-bright-primary { background-color: #a22426; }
+        .text-bright-primary { color: #a22426; }
+        .bg-success-green { background-color: #28A745; }
+        .border-bright-primary { border-color: #a22426; }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(6, 223, 78, 0.21), transparent),
+                        radial-gradient(circle at bottom left, rgba(239, 245, 222, 0.25), transparent);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-anim { animation: float 4s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+
+    <!-- Sticky Navigation -->
+    <nav class="fixed w-full z-50 bg-white/0 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center items-center h-20">
+              
+                <img src="https://www.suretekinfosoft.com/assets/images/logo1.png"  alt="Suretek Infosoft Logo" class="h-10 w-auto" title="Suretek Infosoft">
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 lg:pt-48 lg:pb-32 hero-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:space-x-12">
+                <div class="lg:w-3/5">
+                    <div class="inline-flex items-center space-x-2 bg-primary-50 text-bright-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-bright-primary"></span>
+                        </span>
+                        <span>Exclusive US Launch Pricing Available</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-deep-primary leading-tight mb-6">
+                        Premium IT & Digital Services — Now at <span class="text-bright-primary underline decoration-success-green">Special Reduced Rates</span>
+                    </h1>
+                    <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl">
+                        Empower your business with world-class software engineering and digital marketing. High-performance solutions delivered with US-centric focus, now more accessible than ever.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
+                        <a href="#contact" class="flex items-center justify-center bg-deep-primary text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform shadow-xl">
+                            Get Free Consultation
+                            <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                        </a>
+                        <a href="#services" class="flex items-center justify-center bg-white border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-xl font-bold hover:border-bright-primary hover:text-bright-primary transition">
+                            View Services
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200">
+                        <div>
+                            <div class="text-3xl font-bold text-deep-primary">250+</div>
+                            <div class="text-sm text-slate-500">Global Clients</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-deep-primary">500+</div>
+                            <div class="text-sm text-slate-500">Projects Done</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-deep-primary">98%</div>
+                            <div class="text-sm text-slate-500">Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:block lg:w-2/5 relative">
+                    <div class="bg-white p-8 rounded-3xl shadow-2xl border border-slate-100 float-anim">
+                        <div class="space-y-4">
+                            <div class="h-4 w-1/2 bg-slate-100 rounded"></div>
+                            <div class="h-32 w-full bg-slate-50 rounded-xl flex items-center justify-center">
+                                <i data-lucide="bar-chart-3" class="w-12 h-12 text-bright-primary opacity-20"></i>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="h-20 bg-primary-50 rounded-xl"></div>
+                                <div class="h-20 bg-green-50 rounded-xl"></div>
+                            </div>
+                            <div class="h-4 w-3/4 bg-slate-100 rounded"></div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-success-green text-white p-6 rounded-2xl shadow-xl">
+                        <div class="text-2xl font-bold">100%</div>
+                        <div class="text-xs uppercase tracking-wider font-semibold opacity-80">Quality Guaranteed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="aspect-square bg-slate-100 rounded-3xl overflow-hidden shadow-inner flex items-center justify-center p-12">
+                        <div class="grid grid-cols-2 gap-4 w-full h-full">
+                            <div class="bg-bright-primary rounded-2xl opacity-10"></div>
+                            <div class="bg-deep-primary rounded-2xl opacity-5"></div>
+                            <div class="bg-success-green rounded-2xl opacity-10"></div>
+                            <div class="bg-bright-primary rounded-2xl opacity-20"></div>
+                        </div>
+                        <i data-lucide="globe" class="absolute w-24 h-24 text-bright-primary opacity-20"></i>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-sm font-bold text-bright-primary uppercase tracking-widest mb-4">Who We Are</h2>
+                    <h3 class="text-4xl font-extrabold text-deep-primary mb-6 leading-tight">Your Strategic Partner for Scalable IT Solutions</h3>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        Suretek Infosoft is a global IT leader specializing in high-performance digital solutions. Our team of expert engineers and designers is dedicated to bridging the gap between vision and reality for US enterprises and startups alike.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-100 p-2 rounded-lg text-bright-primary">
+                                <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-deep-primary">15+ Years Experience</h4>
+                                <p class="text-slate-500">Decades of combined expertise in complex system architecture.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-green-100 p-2 rounded-lg text-success-green">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-deep-primary">Global Talent Pool</h4>
+                                <p class="text-slate-500">Access to top 3% of tech talent globally for your project needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-deep-primary mb-4">Our Core Expertise</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Comprehensive digital services designed to scale your business and outpace the competition.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Web Dev -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div class="bg-primary-50 w-14 h-14 rounded-2xl flex items-center justify-center text-bright-primary mb-6 group-hover:bg-bright-primary group-hover:text-white transition-colors">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-deep-primary mb-3">Web Development</h3>
+                    <p class="text-slate-600">Enterprise-grade React, Angular, and Node.js solutions built for speed and security.</p>
+                </div>
+                <!-- Mobile Dev -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div class="bg-green-50 w-14 h-14 rounded-2xl flex items-center justify-center text-success-green mb-6 group-hover:bg-success-green group-hover:text-white transition-colors">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-deep-primary mb-3">Mobile Apps</h3>
+                    <p class="text-slate-600">Native and Cross-platform (Flutter/React Native) mobile experiences that users love.</p>
+                </div>
+                <!-- UI/UX -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div class="bg-purple-50 w-14 h-14 rounded-2xl flex items-center justify-center text-purple-600 mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-deep-primary mb-3">UI/UX Design</h3>
+                    <p class="text-slate-600">User-centric designs that prioritize conversion and seamless interaction.</p>
+                </div>
+                <!-- Digital Marketing -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div class="bg-orange-50 w-14 h-14 rounded-2xl flex items-center justify-center text-orange-600 mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                        <i data-lucide="megaphone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-deep-primary mb-3">Digital Marketing</h3>
+                    <p class="text-slate-600">Strategic SEO, Paid Ads, and Social Media growth campaigns focused on ROI.</p>
+                </div>
+                <!-- E-commerce -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div class="bg-pink-50 w-14 h-14 rounded-2xl flex items-center justify-center text-pink-600 mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
+                        <i data-lucide="shopping-cart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-deep-primary mb-3">E-commerce</h3>
+                    <p class="text-slate-600">Scalable Shopify, Magento, and Custom store solutions for high-volume sales.</p>
+                </div>
+                <!-- Custom Software -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div class="bg-indigo-50 w-14 h-14 rounded-2xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-deep-primary mb-3">Custom Software</h3>
+                    <p class="text-slate-600">Tailored ERP, CRM, and automation tools built for your specific workflow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer Section -->
+    <section class="py-24 bg-deep-primary text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-bright-primary/10 skew-x-12 transform translate-x-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:flex lg:items-center lg:space-x-20">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <span class="inline-block bg-success-green text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Limited Time Strategic Advantage</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">Unlock Premium Talent at <span class="text-bright-primary italic">Sub-Market Rates</span></h2>
+                    <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+                        In an effort to expand our US footprint, we are offering significant price reductions across all service lines. Secure top-tier developers for a fraction of local agency costs.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white/10 p-4 rounded-2xl border border-white/10">
+                            <div class="text-success-green font-bold mb-1">Limited Slots</div>
+                            <div class="text-sm text-slate-400">8 of 12 slots remaining for Q3</div>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-2xl border border-white/10">
+                            <div class="text-bright-primary font-bold mb-1">US-Friendly</div>
+                            <div class="text-sm text-slate-400">EST/PST timezone coverage</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-2xl">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Pricing Comparison</h3>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                <span class="font-medium">US Agency Average</span>
+                                <span class="text-red-500 font-bold">$150 - $250/hr</span>
+                            </div>
+                            <div class="flex justify-between items-center p-6 bg-primary-50 rounded-2xl border-2 border-bright-primary relative">
+                                <span class="font-bold text-deep-primary">Suretek Limited Offer</span>
+                                <span class="text-bright-primary font-extrabold text-2xl">$35 - $65/hr</span>
+                                <div class="absolute -top-3 right-6 bg-bright-primary text-white text-[10px] font-bold px-2 py-1 rounded">BEST VALUE</div>
+                            </div>
+                            <p class="text-center text-sm text-slate-500 italic">Same quality standards. Significant savings.</p>
+                            <a href="#contact" class="block text-center bg-bright-primary text-white w-full py-4 rounded-xl font-bold hover:bg-primary-700 transition">Claim This Offer Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-4xl font-extrabold text-deep-primary mb-8">Why Businesses Choose Suretek</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-6">
+                            <div class="flex-shrink-0 bg-primary-50 p-3 rounded-2xl text-bright-primary">
+                                <i data-lucide="zap" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-deep-primary mb-2">Fast Delivery Cycle</h4>
+                                <p class="text-slate-600">Agile methodologies that ensure your MVP is ready in weeks, not months.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6">
+                            <div class="flex-shrink-0 bg-green-50 p-3 rounded-2xl text-success-green">
+                                <i data-lucide="clock" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-deep-primary mb-2">TimeZone Sync</h4>
+                                <p class="text-slate-600">Our teams overlap with your working hours to ensure seamless communication and daily standups.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6">
+                            <div class="flex-shrink-0 bg-purple-50 p-3 rounded-2xl text-purple-600">
+                                <i data-lucide="users" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-deep-primary mb-2">Dedicated Support</h4>
+                                <p class="text-slate-600">You get a dedicated Project Manager and technical lead assigned exclusively to your account.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 grid grid-cols-2 gap-4">
+                    <div class="space-y-4 pt-8">
+                        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 shadow-sm">
+                            <div class="text-4xl font-bold text-bright-primary mb-2">99%</div>
+                            <p class="text-sm font-semibold text-deep-primary uppercase">Uptime History</p>
+                        </div>
+                        <div class="bg-deep-primary p-6 rounded-3xl text-white shadow-xl">
+                            <div class="text-4xl font-bold mb-2">24/7</div>
+                            <p class="text-sm font-semibold uppercase opacity-80">Tech Monitoring</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-success-green p-6 rounded-3xl text-white shadow-xl">
+                            <div class="text-4xl font-bold mb-2">3X</div>
+                            <p class="text-sm font-semibold uppercase opacity-80">Faster Deployment</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 shadow-sm">
+                            <div class="text-4xl font-bold text-deep-primary mb-2">SOC2</div>
+                            <p class="text-sm font-semibold text-slate-500 uppercase">Security Ready</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-deep-primary mb-4">Proven Results</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Take a look at how we've helped US companies scale their digital operations.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all group border border-slate-200">
+                    <div class="h-64 bg-slate-200 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-bright-primary/20 to-deep-primary/40 flex items-center justify-center">
+                             <i data-lucide="layout" class="w-16 h-16 text-white opacity-40"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-deep-primary">FinTech Mobile App</h3>
+                            <span class="bg-primary-100 text-bright-primary text-xs font-bold px-3 py-1 rounded-full">FINANCE</span>
+                        </div>
+                        <p class="text-slate-600 mb-6">A complete overhaul of a legacy banking app into a high-performance React Native application.</p>
+                        <div class="bg-primary-50 p-4 rounded-2xl">
+                            <div class="text-bright-primary font-bold">Outcome: 40% Increase in User Retention</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all group border border-slate-200">
+                    <div class="h-64 bg-slate-200 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-success-green/20 to-deep-primary/40 flex items-center justify-center">
+                             <i data-lucide="shopping-bag" class="w-16 h-16 text-white opacity-40"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-deep-primary">Luxury E-commerce</h3>
+                            <span class="bg-green-100 text-success-green text-xs font-bold px-3 py-1 rounded-full">RETAIL</span>
+                        </div>
+                        <p class="text-slate-600 mb-6">Global Shopify Expansion with headless integration for a San Francisco-based fashion brand.</p>
+                        <div class="bg-green-50 p-4 rounded-2xl">
+                            <div class="text-success-green font-bold">Outcome: 2.5X Conversion Rate Spike</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-deep-primary mb-16">Trusted by US Business Leaders</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 relative text-left">
+                    <i data-lucide="quote" class="absolute top-6 right-8 text-bright-primary opacity-10 w-12 h-12"></i>
+                    <p class="text-slate-600 mb-8 italic">"Suretek didn't just build our software; they became an extension of our core team. Their expertise in AWS and React is unparalleled."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-slate-300 rounded-full"></div>
+                        <div>
+                            <div class="font-bold text-deep-primary">Michael Ross</div>
+                            <div class="text-sm text-slate-500">CTO, HealthSync Solutions</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 relative text-left shadow-xl scale-105 z-10">
+                    <i data-lucide="quote" class="absolute top-6 right-8 text-bright-primary opacity-10 w-12 h-12"></i>
+                    <p class="text-slate-600 mb-8 italic">"Finding a partner that respects our timelines and quality standards was hard until we met Suretek. The pricing is unbeatable for this level of talent."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-slate-300 rounded-full"></div>
+                        <div>
+                            <div class="font-bold text-deep-primary">Sarah Jenkins</div>
+                            <div class="text-sm text-slate-500">Founder, Velocity Marketing</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 relative text-left">
+                    <i data-lucide="quote" class="absolute top-6 right-8 text-bright-primary opacity-10 w-12 h-12"></i>
+                    <p class="text-slate-600 mb-8 italic">"Their ability to handle complex custom enterprise software with such ease was impressive. Highly recommend for any serious tech project."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-slate-300 rounded-full"></div>
+                        <div>
+                            <div class="font-bold text-deep-primary">Robert Chen</div>
+                            <div class="text-sm text-slate-500">COO, GreenLine Logistics</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-24 bg-deep-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-extrabold mb-4">Our Seamless Workflow</h2>
+                <p class="text-slate-400">Five steps from concept to commercial success.</p>
+            </div>
+            <div class="grid md:grid-cols-5 gap-8">
+                <div class="text-center relative">
+                    <div class="w-16 h-16 bg-bright-primary rounded-2xl mx-auto flex items-center justify-center mb-6 shadow-lg shadow-primary-500/20 font-bold text-xl">01</div>
+                    <h4 class="font-bold mb-2">Consultation</h4>
+                    <p class="text-sm text-slate-400">Deep dive into goals</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl mx-auto flex items-center justify-center mb-6 border border-white/10 font-bold text-xl">02</div>
+                    <h4 class="font-bold mb-2">Planning</h4>
+                    <p class="text-sm text-slate-400">Detailed Roadmap</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl mx-auto flex items-center justify-center mb-6 border border-white/10 font-bold text-xl">03</div>
+                    <h4 class="font-bold mb-2">Development</h4>
+                    <p class="text-sm text-slate-400">Agile Sprint execution</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl mx-auto flex items-center justify-center mb-6 border border-white/10 font-bold text-xl">04</div>
+                    <h4 class="font-bold mb-2">Delivery</h4>
+                    <p class="text-sm text-slate-400">QA & Live Launch</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-success-green rounded-2xl mx-auto flex items-center justify-center mb-6 shadow-lg shadow-green-500/20 font-bold text-xl">05</div>
+                    <h4 class="font-bold mb-2">Support</h4>
+                    <p class="text-sm text-slate-400">24/7 Ongoing Care</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-bright-primary rounded-[3rem] p-12 text-center text-white shadow-2xl shadow-primary-200 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-8 relative z-10">Start Your Project Today</h2>
+                <p class="text-xl mb-12 opacity-90 relative z-10 max-w-2xl mx-auto">Get a full project breakdown and a no-obligation quote within 24 hours.</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 relative z-10">
+                    <a href="#contact" class="bg-deep-primary text-white px-10 py-5 rounded-2xl font-bold hover:scale-105 transition shadow-xl">Book a Strategy Call</a>
+                    <a href="#contact" class="bg-white text-bright-primary px-10 py-5 rounded-2xl font-bold hover:bg-slate-50 transition shadow-xl">Get a Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="text-4xl font-extrabold text-deep-primary mb-6">Let's Build Something Great</h2>
+                    <p class="text-slate-600 mb-12 text-lg">Our experts are ready to consult on your digital strategy. Reach out via form or use our direct contact channels.</p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-200 text-bright-primary">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm text-slate-500 font-semibold uppercase tracking-wider">Email Us</div>
+                                <div class="text-xl font-bold text-deep-primary">solutions@suretekinfosoft.com</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-200 text-success-green">
+                                <i data-lucide="phone-call"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm text-slate-500 font-semibold uppercase tracking-wider">WhatsApp / Call</div>
+                                <div class="text-xl font-bold text-deep-primary">+1 (234) 567-8910</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-200 text-primary-400">
+                                <i data-lucide="calendar"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm text-slate-500 font-semibold uppercase tracking-wider">Scheduling</div>
+                                <div class="text-xl font-bold text-deep-primary underline decoration-primary-200 cursor-pointer">Pick a time on Calendly</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl border border-slate-100">
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Name</label>
+                                <input type="text" placeholder="John Doe" class="w-full px-5 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-bright-primary focus:border-transparent outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Email</label>
+                                <input type="email" placeholder="john@company.com" class="w-full px-5 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-bright-primary focus:border-transparent outline-none transition">
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Phone</label>
+                                <input type="tel" placeholder="+1 (234) 000-0000" class="w-full px-5 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-bright-primary focus:border-transparent outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Service Required</label>
+                                <select class="w-full px-5 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-bright-primary focus:border-transparent outline-none transition bg-white">
+                                    <option>Web Development</option>
+                                    <option>Mobile Apps</option>
+                                    <option>Digital Marketing</option>
+                                    <option>Custom Software</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Message</label>
+                            <textarea rows="4" placeholder="Tell us about your project goals..." class="w-full px-5 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-bright-primary focus:border-transparent outline-none transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-bright-primary text-white py-5 rounded-2xl font-bold text-lg hover:bg-primary-700 transition shadow-lg shadow-primary-200">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-20 pb-10 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-2">
+                    <span class="text-2xl font-extrabold tracking-tight text-deep-primary mb-6 block">SURETEK<span class="text-bright-primary">INFOSOFT</span></span>
+                    <p class="text-slate-500 max-w-sm leading-relaxed mb-8">Empowering US businesses with next-generation digital technology and world-class offshore value since 2008.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400 hover:text-bright-primary transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400 hover:text-bright-primary transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400 hover:text-bright-primary transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-bold text-deep-primary mb-6">Services</h5>
+                    <ul class="space-y-4 text-slate-500">
+                        <li><a href="#" class="hover:text-bright-primary transition">Web Development</a></li>
+                        <li><a href="#" class="hover:text-bright-primary transition">Mobile Solutions</a></li>
+                        <li><a href="#" class="hover:text-bright-primary transition">UI/UX Strategy</a></li>
+                        <li><a href="#" class="hover:text-bright-primary transition">Custom Software</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-deep-primary mb-6">Company</h5>
+                    <ul class="space-y-4 text-slate-500">
+                        <li><a href="#" class="hover:text-bright-primary transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-bright-primary transition">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-bright-primary transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-bright-primary transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center text-sm text-slate-400">
+                <p>&copy; 2024 Suretek Infosoft. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-slate-600">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-600">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth reveal animation on scroll (simple implementation)
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

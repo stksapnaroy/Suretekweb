@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suretek Infosoft | Standing With Your Business</title>
+    <meta name="description"
+        content="Suretek Infosoft offers reliable, affordable digital services to help businesses stay strong and grow despite global challenges.">
+
+    <!-- Google Fonts: Teko (Headings) and Poppins (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Teko:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#a22426',
+                        secondary: '#f3f3f3',
+                        darktext: '#222222',
+                        pagebg: '#ffffff',
+                    },
+                    fontFamily: {
+                        heading: ['Teko', 'sans-serif'],
+                        body: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for Animations & UI Polish */
+        body {
+            background-color: var(--pagebg);
+            color: var(--darktext);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Style adjustments for Teko font to ensure good readability */
+        .font-heading {
+            letter-spacing: 0.02em;
+            font-weight: 600;
+            line-height: 1.1;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #a22426;
+            box-shadow: 0 0 0 3px rgba(162, 36, 38, 0.15);
+        }
+    </style>
+</head>
+
+<body class="font-body text-darktext antialiased bg-pagebg selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-secondary">
+        <div class="mx-auto px-4 sm:px-6 lg:px-20">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img class="max-w-32" src="https://www.suretekinfosoft.com/assets/images/logo1.png" alt="" title="">
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="#initiative" class="text-darktext hover:text-primary font-medium transition-colors">Our
+                        Initiative</a>
+                    <a href="#services"
+                        class="text-darktext hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="#offer" class="text-primary font-semibold transition-colors flex items-center gap-1">
+                        Crisis Support Plans
+                    </a>
+                    <a href="#why-us" class="text-darktext hover:text-primary font-medium transition-colors">Why Us</a>
+                    <a href="#contact"
+                        class="bg-primary hover:bg-[#8a1e20] text-white px-7 py-2.5 rounded font-medium transition-all transform hover:-translate-y-0.5 shadow-md shadow-primary/20">
+                        Let's Talk
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-darktext hover:text-primary focus:outline-none">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-secondary absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#initiative"
+                    class="block px-3 py-3 text-base font-medium text-darktext hover:text-primary hover:bg-secondary rounded-md">Our
+                    Initiative</a>
+                <a href="#services"
+                    class="block px-3 py-3 text-base font-medium text-darktext hover:text-primary hover:bg-secondary rounded-md">Services</a>
+                <a href="#offer"
+                    class="block px-3 py-3 text-base font-medium text-primary hover:bg-secondary rounded-md">Crisis
+                    Support Plans</a>
+                <a href="#why-us"
+                    class="block px-3 py-3 text-base font-medium text-darktext hover:text-primary hover:bg-secondary rounded-md">Why
+                    Us</a>
+                <a href="#contact"
+                    class="block mt-4 text-center bg-primary text-white px-4 py-3 rounded-md font-medium">Let's Talk</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-pagebg bg-pattern overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto reveal">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary text-darktext text-sm font-medium mb-6 border border-gray-200">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-primary"></i>
+                    Reliable Digital Partnership in Uncertain Times
+                </div>
+                <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl text-darktext uppercase mb-4">
+                    Standing With Your Business <br class="hidden md:block" />
+                    <span class="text-primary">in Challenging Times</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Global shifts require strong, reliable partnerships. We provide affordable, high-quality IT and
+                    digital services to help startups and enterprises maintain continuity and grow.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contact"
+                        class="w-full sm:w-auto bg-primary hover:bg-[#8a1e20] text-white px-8 py-4 rounded font-medium text-lg transition-all transform hover:-translate-y-1 shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                        Discuss Your Needs <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#initiative"
+                        class="w-full sm:w-auto bg-white border-2 border-secondary text-darktext hover:border-gray-300 px-8 py-4 rounded font-medium text-lg transition-all">
+                        Learn About Our Initiative
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Initiative Section -->
+    <section id="initiative" class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h4 class="font-heading text-2xl text-primary tracking-wide uppercase mb-2">Our Commitment</h4>
+                    <h2 class="font-heading text-5xl md:text-6xl text-darktext mb-6 uppercase">
+                        Strength Through <br>Collaboration
+                    </h2>
+                    <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                        At Suretek Infosoft, we understand that current global economic and geopolitical challenges put
+                        immense pressure on businesses. Startups and SMEs are facing unprecedented budget constraints
+                        and operational hurdles.
+                    </p>
+                    <p class="text-gray-700 mb-8 text-lg leading-relaxed">
+                        We believe in growing together. That’s why we have restructured our pricing and accelerated our
+                        delivery models. Our goal is to provide you with the robust digital infrastructure you need to
+                        remain resilient, without the typical financial strain.
+                    </p>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 bg-white p-4 rounded border border-gray-100 shadow-sm">
+                            <div class="bg-secondary p-2 rounded"><i data-lucide="handshake"
+                                    class="w-5 h-5 text-primary"></i></div>
+                            <span class="text-darktext font-medium">Dedicated support for struggling SMEs</span>
+                        </li>
+                        <li class="flex items-center gap-3 bg-white p-4 rounded border border-gray-100 shadow-sm">
+                            <div class="bg-secondary p-2 rounded"><i data-lucide="trending-up"
+                                    class="w-5 h-5 text-primary"></i></div>
+                            <span class="text-darktext font-medium">Affordable pricing structures to protect your
+                                runway</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative reveal">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Team collaborating" class="rounded shadow-xl z-10 relative object-cover h-[500px] w-full">
+                    <!-- Subtle accent box behind image -->
+                    <div class="absolute -bottom-6 -left-6 w-full h-full border-2 border-primary/20 rounded z-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-pagebg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h4 class="font-heading text-2xl text-primary tracking-wide uppercase mb-2">What We Do</h4>
+                <h2 class="font-heading text-5xl md:text-6xl text-darktext mb-4 uppercase">Reliable Digital Solutions
+                </h2>
+                <p class="text-gray-600 text-lg">Delivering robust, scalable, and cost-effective services so you can
+                    focus on your core business continuity.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1: Team Augmentation -->
+                <a href="https://www.suretekinfosoft.com/team-augmentation.php"
+                    class="bg-secondary p-8 rounded border border-gray-200 hover:border-primary transition-all duration-300 transform hover:-translate-y-1 reveal group block h-full flex flex-col"
+                    style="transition-delay: 0ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary/10 transition-colors flex-shrink-0">
+                        <i data-lucide="users"
+                            class="w-7 h-7 text-primary group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-3xl text-darktext mb-3 uppercase tracking-wide group-hover:text-primary transition-colors flex-shrink-0">
+                        Team <br class="hidden lg:block">Augmentation</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm flex-grow">Scalable Talent Extension</p>
+                    <div
+                        class="mt-4 pt-4 border-t border-gray-200 flex items-center text-sm font-medium text-primary group-hover:translate-x-1 transition-all flex-shrink-0">
+                        <i data-lucide="check" class="w-4 h-4 mr-2"></i> Rapid Scaling
+                    </div>
+                </a>
+
+                <!-- Service 2: Quality Assurance -->
+                <a href="https://www.suretekinfosoft.com/quality-assurance.php"
+                    class="bg-secondary p-8 rounded border border-gray-200 hover:border-primary transition-all duration-300 transform hover:-translate-y-1 reveal group block h-full flex flex-col"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary/10 transition-colors flex-shrink-0">
+                        <i data-lucide="shield"
+                            class="w-7 h-7 text-primary group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-3xl text-darktext mb-3 uppercase tracking-wide group-hover:text-primary transition-colors flex-shrink-0">
+                        Quality <br class="hidden lg:block">Assurance</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm flex-grow">Flawless Product Delivery</p>
+                    <div
+                        class="mt-4 pt-4 border-t border-gray-200 flex items-center text-sm font-medium text-primary group-hover:translate-x-1 transition-all flex-shrink-0">
+                        <i data-lucide="check" class="w-4 h-4 mr-2"></i> Zero Defects
+                    </div>
+                </a>
+
+                <!-- Service 3: Software Development -->
+                <a href="https://www.suretekinfosoft.com/custom-software-development.php"
+                    class="bg-secondary p-8 rounded border border-gray-200 hover:border-primary transition-all duration-300 transform hover:-translate-y-1 reveal group block h-full flex flex-col"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary/10 transition-colors flex-shrink-0">
+                        <i data-lucide="code"
+                            class="w-7 h-7 text-primary group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-3xl text-darktext mb-3 uppercase tracking-wide group-hover:text-primary transition-colors flex-shrink-0">
+                        Software <br class="hidden lg:block">Development</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm flex-grow">Custom Software Solutions</p>
+                    <div
+                        class="mt-4 pt-4 border-t border-gray-200 flex items-center text-sm font-medium text-primary group-hover:translate-x-1 transition-all flex-shrink-0">
+                        <i data-lucide="check" class="w-4 h-4 mr-2"></i> Tailored Solutions
+                    </div>
+                </a>
+
+                <!-- Service 4: Mobile Apps Development -->
+                <a href="https://www.suretekinfosoft.com/mobile-app-development.php"
+                    class="bg-secondary p-8 rounded border border-gray-200 hover:border-primary transition-all duration-300 transform hover:-translate-y-1 reveal group block h-full flex flex-col"
+                    style="transition-delay: 300ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary/10 transition-colors flex-shrink-0">
+                        <i data-lucide="smartphone"
+                            class="w-7 h-7 text-primary group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-3xl text-darktext mb-3 uppercase tracking-wide group-hover:text-primary transition-colors flex-shrink-0">
+                        Mobile Apps <br class="hidden lg:block">Development</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm flex-grow">Innovative App Development</p>
+                    <div
+                        class="mt-4 pt-4 border-t border-gray-200 flex items-center text-sm font-medium text-primary group-hover:translate-x-1 transition-all flex-shrink-0">
+                        <i data-lucide="check" class="w-4 h-4 mr-2"></i> Cross-Platform
+                    </div>
+                </a>
+
+                <!-- Service 5: Software Maintenance -->
+                <a href="https://www.suretekinfosoft.com/maintenance-and-support.php"
+                    class="bg-secondary p-8 rounded border border-gray-200 hover:border-primary transition-all duration-300 transform hover:-translate-y-1 reveal group block h-full flex flex-col"
+                    style="transition-delay: 400ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary/10 transition-colors flex-shrink-0">
+                        <i data-lucide="settings"
+                            class="w-7 h-7 text-primary group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-3xl text-darktext mb-3 uppercase tracking-wide group-hover:text-primary transition-colors flex-shrink-0">
+                        Software <br class="hidden lg:block">Maintenance</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm flex-grow">Reliable System Support</p>
+                    <div
+                        class="mt-4 pt-4 border-t border-gray-200 flex items-center text-sm font-medium text-primary group-hover:translate-x-1 transition-all flex-shrink-0">
+                        <i data-lucide="check" class="w-4 h-4 mr-2"></i> 24/7 Support
+                    </div>
+                </a>
+
+                <!-- Service 6: IT Consulting -->
+                <a href="https://www.suretekinfosoft.com/it-consulting.php"
+                    class="bg-secondary p-8 rounded border border-gray-200 hover:border-primary transition-all duration-300 transform hover:-translate-y-1 reveal group block h-full flex flex-col"
+                    style="transition-delay: 500ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary/10 transition-colors flex-shrink-0">
+                        <i data-lucide="activity"
+                            class="w-7 h-7 text-primary group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-3xl text-darktext mb-3 uppercase tracking-wide group-hover:text-primary transition-colors flex-shrink-0">
+                        IT Consulting <br class="hidden lg:block">Services</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm flex-grow">Strategic Tech Guidance</p>
+                    <div
+                        class="mt-4 pt-4 border-t border-gray-200 flex items-center text-sm font-medium text-primary group-hover:translate-x-1 transition-all flex-shrink-0">
+                        <i data-lucide="check" class="w-4 h-4 mr-2"></i> Expert Advice
+                    </div>
+                </a>
+
+                <!-- Service 7: Web Apps Development -->
+                <a href="https://www.suretekinfosoft.com/web-application-development.php"
+                    class="bg-secondary p-8 rounded border border-gray-200 hover:border-primary transition-all duration-300 transform hover:-translate-y-1 reveal group block h-full flex flex-col"
+                    style="transition-delay: 600ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary/10 transition-colors flex-shrink-0">
+                        <i data-lucide="globe"
+                            class="w-7 h-7 text-primary group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-3xl text-darktext mb-3 uppercase tracking-wide group-hover:text-primary transition-colors flex-shrink-0">
+                        Web Apps <br class="hidden lg:block">Development</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm flex-grow">Powerful Web Solutions</p>
+                    <div
+                        class="mt-4 pt-4 border-t border-gray-200 flex items-center text-sm font-medium text-primary group-hover:translate-x-1 transition-all flex-shrink-0">
+                        <i data-lucide="check" class="w-4 h-4 mr-2"></i> Scalable Apps
+                    </div>
+                </a>
+
+                <!-- Service 8: Artificial Intelligence -->
+                <a href="https://www.suretekinfosoft.com/ai-solutions.php"
+                    class="bg-secondary p-8 rounded border border-gray-200 hover:border-primary transition-all duration-300 transform hover:-translate-y-1 reveal group block h-full flex flex-col"
+                    style="transition-delay: 700ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary/10 transition-colors flex-shrink-0">
+                        <i data-lucide="brain"
+                            class="w-7 h-7 text-primary group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-3xl text-darktext mb-3 uppercase tracking-wide group-hover:text-primary transition-colors flex-shrink-0">
+                        Artificial <br class="hidden lg:block">Intelligence</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm flex-grow">Intelligent Automation Solutions</p>
+                    <div
+                        class="mt-4 pt-4 border-t border-gray-200 flex items-center text-sm font-medium text-primary group-hover:translate-x-1 transition-all flex-shrink-0">
+                        <i data-lucide="check" class="w-4 h-4 mr-2"></i> AI Automation
+                    </div>
+                </a>
+
+                <!-- Service 9: GHL Services #1 -->
+                <a href="https://www.suretekinfosoft.com"
+                    class="bg-secondary p-8 rounded border border-gray-200 hover:border-primary transition-all duration-300 transform hover:-translate-y-1 reveal group block h-full flex flex-col"
+                    style="transition-delay: 800ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary/10 transition-colors flex-shrink-0">
+                        <i data-lucide="zap"
+                            class="w-7 h-7 text-primary group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-3xl text-darktext mb-3 uppercase tracking-wide group-hover:text-primary transition-colors flex-shrink-0">
+                        GHL <br class="hidden lg:block">Services</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm flex-grow">Complete GoHighLevel CRM setup and
+                        customization</p>
+                    <div
+                        class="mt-4 pt-4 border-t border-gray-200 flex items-center text-sm font-medium text-primary group-hover:translate-x-1 transition-all flex-shrink-0">
+                        <i data-lucide="check" class="w-4 h-4 mr-2"></i> CRM Automation
+                    </div>
+                </a>
+
+                <!-- Service 10: GHL Services #2 -->
+                <a href="https://www.suretekinfosoft.com"
+                    class="bg-secondary p-8 rounded border border-gray-200 hover:border-primary transition-all duration-300 transform hover:-translate-y-1 reveal group block h-full flex flex-col"
+                    style="transition-delay: 900ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary/10 transition-colors flex-shrink-0">
+                        <i data-lucide="database"
+                            class="w-7 h-7 text-primary group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-3xl text-darktext mb-3 uppercase tracking-wide group-hover:text-primary transition-colors flex-shrink-0">
+                        GHL <br class="hidden lg:block">Marketing</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm flex-grow">Advanced marketing automation and
+                        funnel optimization</p>
+                    <div
+                        class="mt-4 pt-4 border-t border-gray-200 flex items-center text-sm font-medium text-primary group-hover:translate-x-1 transition-all flex-shrink-0">
+                        <i data-lucide="check" class="w-4 h-4 mr-2"></i> Funnel Optimization
+                    </div>
+                </a>
+
+                <!-- Service 11: Digital Design -->
+                <a href="https://portfolio.suretekinfosoft.com" target="_blank"
+                    class="bg-secondary p-8 rounded border border-gray-200 hover:border-primary transition-all duration-300 transform hover:-translate-y-1 reveal group block h-full flex flex-col"
+                    style="transition-delay: 1000ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary/10 transition-colors flex-shrink-0">
+                        <i data-lucide="feather"
+                            class="w-7 h-7 text-primary group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-2xl lg:text-3xl text-darktext mb-3 uppercase tracking-wide group-hover:text-primary transition-colors flex-shrink-0">
+                        Digital Design & Creative Services</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm flex-grow">Wide range of design services and
+                        digital solutions</p>
+                    <div
+                        class="mt-4 pt-4 border-t border-gray-200 flex items-center text-sm font-medium text-primary group-hover:translate-x-1 transition-all flex-shrink-0">
+                        <i data-lucide="check" class="w-4 h-4 mr-2"></i> Brand Excellence
+                    </div>
+                </a>
+
+                <!-- Service 12: IT Infra & Cloud Services -->
+                <a href="https://www.suretekinfosoft.com/it-infra-and-clould-services.php"
+                    class="bg-secondary p-8 rounded border border-gray-200 hover:border-primary transition-all duration-300 transform hover:-translate-y-1 reveal group block h-full flex flex-col"
+                    style="transition-delay: 1100ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary/10 transition-colors flex-shrink-0">
+                        <i data-lucide="cloud"
+                            class="w-7 h-7 text-primary group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-2xl lg:text-3xl text-darktext mb-3 uppercase tracking-wide group-hover:text-primary transition-colors flex-shrink-0">
+                        IT Infra & Cloud Services</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm flex-grow">Operate on-premises, cloud, or
+                        hybrid systems</p>
+                    <div
+                        class="mt-4 pt-4 border-t border-gray-200 flex items-center text-sm font-medium text-primary group-hover:translate-x-1 transition-all flex-shrink-0">
+                        <i data-lucide="check" class="w-4 h-4 mr-2"></i> Hybrid Solutions
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer Section -->
+    <section id="offer" class="py-20 bg-pagebg relative border-y border-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-secondary rounded border border-gray-200 overflow-hidden reveal flex flex-col lg:flex-row">
+
+                <!-- Left Context -->
+                <div class="p-10 lg:p-16 lg:w-2/3">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded bg-white border border-gray-200 text-primary text-sm font-semibold mb-6 uppercase tracking-wider">
+                        Support Initiative
+                    </div>
+                    <h2 class="font-heading text-5xl text-darktext mb-4 uppercase">Crisis Support Packages</h2>
+                    <p class="text-gray-700 mb-6 text-lg">
+                        We are offering subsidized, high-value technical support and development plans for businesses
+                        navigating current market uncertainties. This isn't about being "cheap"—it's about maximizing
+                        strategic value when budgets are tight.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-primary"></i>
+                            <span class="text-darktext font-medium text-lg">Flexible, milestone-based payment
+                                structures</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-primary"></i>
+                            <span class="text-darktext font-medium text-lg">Priority resource allocation for urgent
+                                continuity needs</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-primary"></i>
+                            <span class="text-darktext font-medium text-lg">Free initial technical audit and strategy
+                                consultation</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right CTA -->
+                <div
+                    class="p-10 lg:p-16 lg:w-1/3 bg-primary text-white flex flex-col justify-center items-center text-center">
+                    <i data-lucide="heart-handshake" class="w-16 h-16 mb-6 opacity-90"></i>
+                    <h3 class="font-heading text-4xl mb-4 uppercase">Let Us Help You Stabilize</h3>
+                    <p class="text-white/80 mb-8">Reach out to discuss a plan tailored to your current constraints and
+                        goals.</p>
+                    <a href="#contact"
+                        class="w-full bg-white text-primary hover:bg-secondary py-4 rounded font-bold text-lg transition-all shadow-lg">
+                        Claim Support Plan
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-24 bg-pagebg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h4 class="font-heading text-2xl text-primary tracking-wide uppercase mb-2">Our Value</h4>
+                <h2 class="font-heading text-5xl md:text-6xl text-darktext mb-4 uppercase">Why Partner With Us</h2>
+                <p class="text-gray-600 text-lg">We stand by our clients with transparency, skill, and unwavering
+                    support.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded bg-secondary reveal">
+                    <div
+                        class="w-16 h-16 mx-auto bg-white rounded flex items-center justify-center mb-6 shadow-sm text-primary">
+                        <i data-lucide="wallet" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-heading text-3xl text-darktext mb-2 uppercase tracking-wide">Cost-Effective
+                        Solutions</h3>
+                    <p class="text-gray-600 text-sm">Optimized development cycles that respect your budget without
+                        cutting corners on quality.</p>
+                </div>
+                <div class="text-center p-6 rounded bg-secondary reveal" style="transition-delay: 100ms;">
+                    <div
+                        class="w-16 h-16 mx-auto bg-white rounded flex items-center justify-center mb-6 shadow-sm text-primary">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-heading text-3xl text-darktext mb-2 uppercase tracking-wide">Experienced Team</h3>
+                    <p class="text-gray-600 text-sm">Senior developers and strategists who have navigated complex
+                        business landscapes before.</p>
+                </div>
+                <div class="text-center p-6 rounded bg-secondary reveal" style="transition-delay: 200ms;">
+                    <div
+                        class="w-16 h-16 mx-auto bg-white rounded flex items-center justify-center mb-6 shadow-sm text-primary">
+                        <i data-lucide="zap" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-heading text-3xl text-darktext mb-2 uppercase tracking-wide">Fast Turnaround</h3>
+                    <p class="text-gray-600 text-sm">Agile methodologies designed to deploy crucial updates and systems
+                        rapidly.</p>
+                </div>
+                <div class="text-center p-6 rounded bg-secondary reveal" style="transition-delay: 300ms;">
+                    <div
+                        class="w-16 h-16 mx-auto bg-white rounded flex items-center justify-center mb-6 shadow-sm text-primary">
+                        <i data-lucide="life-buoy" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-heading text-3xl text-darktext mb-2 uppercase tracking-wide">Dedicated Support</h3>
+                    <p class="text-gray-600 text-sm">Constant communication, transparency, and a team that genuinely
+                        cares about your success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h4 class="font-heading text-2xl text-primary tracking-wide uppercase mb-2">Trust & Continuity</h4>
+                <h2 class="font-heading text-5xl md:text-6xl text-darktext mb-4 uppercase">Words From Our Partners</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded border border-gray-200 shadow-sm relative reveal">
+                    <i data-lucide="quote" class="absolute top-6 right-6 w-8 h-8 text-secondary"></i>
+                    <p class="text-gray-700 mb-6 font-medium text-sm leading-relaxed">"When our budget was slashed due
+                        to market conditions, Suretek stepped in. They restructured our project phases, keeping our core
+                        platform running flawlessly without overwhelming our finances. A true partner."</p>
+                    <div class="flex items-center gap-4 border-t border-gray-100 pt-4">
+                        <div class="w-12 h-12 bg-secondary rounded overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-heading text-2xl text-darktext uppercase tracking-wide leading-none">Marcus
+                                R.</h4>
+                            <p class="text-xs text-gray-500 uppercase">Operations Director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded border border-gray-200 shadow-sm relative reveal"
+                    style="transition-delay: 100ms;">
+                    <i data-lucide="quote" class="absolute top-6 right-6 w-8 h-8 text-secondary"></i>
+                    <p class="text-gray-700 mb-6 font-medium text-sm leading-relaxed">"The empathy and speed
+                        demonstrated by the Suretek team was remarkable. They delivered our emergency digital pivot in
+                        half the expected time. They truly understand the meaning of business resilience."</p>
+                    <div class="flex items-center gap-4 border-t border-gray-100 pt-4">
+                        <div class="w-12 h-12 bg-secondary rounded overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-heading text-2xl text-darktext uppercase tracking-wide leading-none">Elena
+                                S.</h4>
+                            <p class="text-xs text-gray-500 uppercase">Startup Founder</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded border border-gray-200 shadow-sm relative reveal"
+                    style="transition-delay: 200ms;">
+                    <i data-lucide="quote" class="absolute top-6 right-6 w-8 h-8 text-secondary"></i>
+                    <p class="text-gray-700 mb-6 font-medium text-sm leading-relaxed">"Finding a development agency that
+                        feels like a supportive extension of your own team is rare. Suretek Infosoft provided reliable,
+                        continuous IT support when we needed it most. Highly recommended."</p>
+                    <div class="flex items-center gap-4 border-t border-gray-100 pt-4">
+                        <div class="w-12 h-12 bg-secondary rounded overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-heading text-2xl text-darktext uppercase tracking-wide leading-none">David
+                                C.</h4>
+                            <p class="text-xs text-gray-500 uppercase">CTO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Final CTA Section -->
+    <section id="contact" class="py-24 bg-pagebg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-16 reveal">
+                <h2 class="font-heading text-6xl md:text-7xl text-darktext mb-6 uppercase">Let’s Grow Together <br><span
+                        class="text-primary">— Even in Tough Times</span></h2>
+                <p class="text-gray-600 text-lg mb-8">Reach out to us today. We are ready to listen, strategize, and
+                    support your business with affordable, top-tier digital services.</p>
+            </div>
+
+            <div class="bg-secondary rounded-lg p-8 md:p-12 shadow-sm border border-gray-200 max-w-4xl mx-auto reveal">
+                <form action="#" method="POST" class="space-y-6"
+                    onsubmit="event.preventDefault(); alert('Message sent successfully. We are here for you and will reply shortly.');">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-darktext mb-2">Full Name</label>
+                            <input type="text" id="name" required
+                                class="w-full px-4 py-3 rounded border border-gray-300 bg-white transition-colors"
+                                placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-darktext mb-2">Business
+                                Email</label>
+                            <input type="email" id="email" required
+                                class="w-full px-4 py-3 rounded border border-gray-300 bg-white transition-colors"
+                                placeholder="you@company.com">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="service" class="block text-sm font-semibold text-darktext mb-2">How can we support
+                            you?</label>
+                        <select id="service" required
+                            class="w-full px-4 py-3 rounded border border-gray-300 bg-white transition-colors text-gray-700">
+                            <option value="">Select a service category...</option>
+                            <option value="web">Web / App Development</option>
+                            <option value="support">IT Support & Maintenance</option>
+                            <option value="marketing">Digital Marketing Growth</option>
+                            <option value="consulting">Strategic Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-darktext mb-2">Tell us about your
+                            current challenges & goals</label>
+                        <textarea id="message" rows="4" required
+                            class="w-full px-4 py-3 rounded border border-gray-300 bg-white transition-colors resize-none"
+                            placeholder="We're here to listen and help..."></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-primary hover:bg-[#8a1e20] text-white py-4 rounded font-bold text-lg transition-all shadow flex justify-center items-center gap-2">
+                        Send Message
+                    </button>
+                    <p class="text-xs text-center text-gray-500 mt-4">We respect your privacy. Your information is
+                        secure.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Top Section -->
+    <div
+        class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12 lg:px-20 bg-gray-900 py-10 px-4  text-gray-300">
+        <!-- LEFT: Logo/Contact (Full height mobile) -->
+        <div class="col-span-2 md:col-span-1 lg:col-span-1 space-y-6 lg:space-y-8 md:pr-8">
+            <!-- Logo -->
+            <a href="https://www.suretekinfosoft.com/index.php" class="block mb-3">
+                <img src="https://www.suretekinfosoft.com/assets/images/logo-white.png" alt="Suretek Infosoft"
+                    class="h-16 w-auto">
+            </a>
+
+            <!-- Contact Info -->
+            <div class="space-y-3 text-sm">
+                <p class="flex flex-wrap"><strong class="mr-2">Address:</strong> D-247/32, Sector 63, Noida,<br
+                        class="hidden lg:inline"> Uttar Pradesh - 201301</p>
+                <p class="flex flex-wrap"><strong class="mr-2">Email:</strong> <a href="mailto:info@suretekinfosoft.com"
+                        class="hover:text-white hover:underline">info@suretekinfosoft.com</a></p>
+                <p class="flex flex-wrap"><strong class="mr-2">Phone:</strong> +91-120-4234350</p>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="flex flex-wrap gap-3 pt-4">
+                <a href="https://www.facebook.com/suretekinfosoftglobal" target="_blank"
+                    class="w-10 h-10 hover:scale-110 transition-transform"><img
+                        src="https://www.suretekinfosoft.com/assets/images/icons/facebook.png"
+                        class="w-full h-full"></a>
+                <a href="https://www.instagram.com/suretekinfosoft/" target="_blank"
+                    class="w-10 h-10 hover:scale-110 transition-transform"><img
+                        src="https://www.suretekinfosoft.com/assets/images/icons/instagram.png"
+                        class="w-full h-full"></a>
+                <a href="https://medium.com/@Suretek_infosoft" target="_blank"
+                    class="w-10 h-10 hover:scale-110 transition-transform"><img
+                        src="https://www.suretekinfosoft.com/assets/images/icons/medium.png" class="w-full h-full"></a>
+                <a href="https://x.com/suretekinfo" target="_blank"
+                    class="w-10 h-10 hover:scale-110 transition-transform"><img
+                        src="https://www.suretekinfosoft.com/assets/images/icons/twitter-x.png"
+                        class="w-full h-full"></a>
+                <a href="https://www.linkedin.com/company/suretek-infosoft-pvt--ltd-/" target="_blank"
+                    class="w-10 h-10 hover:scale-110 transition-transform"><img
+                        src="https://www.suretekinfosoft.com/assets/images/icons/linkedin.png"
+                        class="w-full h-full"></a>
+                <a href="https://www.behance.net/suretekinfosoft" target="_blank"
+                    class="w-10 h-10 hover:scale-110 transition-transform"><img
+                        src="https://www.suretekinfosoft.com/assets/images/icons/behance.png" class="w-full h-full"></a>
+                <a href="https://www.youtube.com/@suretekinfosoftglobal" target="_blank"
+                    class="w-10 h-10 hover:scale-110 transition-transform"><img
+                        src="https://www.suretekinfosoft.com/assets/images/icons/youtube.png" class="w-full h-full"></a>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="col-span-1 lg:col-span-1 lg:ms-4">
+            <h5 class="text-lg font-semibold mb-6">Services</h5>
+            <ul class="space-y-3">
+                <li><a href="https://www.suretekinfosoft.com/team-augmentation.php"
+                        class="block py-1 hover:text-white transition-colors">Team Augmentation</a></li>
+                <li><a href="https://www.suretekinfosoft.com/quality-assurance.php"
+                        class="block py-1 hover:text-white transition-colors">Quality Assurance</a></li>
+                <li><a href="https://www.suretekinfosoft.com/custom-software-development.php"
+                        class="block py-1 hover:text-white transition-colors">Software Development</a></li>
+                <li><a href="https://www.suretekinfosoft.com/mobile-app-development.php"
+                        class="block py-1 hover:text-white transition-colors">Mobile Apps</a></li>
+                <li><a href="https://www.suretekinfosoft.com/maintenance-and-support.php"
+                        class="block py-1 hover:text-white transition-colors">Maintenance</a></li>
+                <li><a href="https://www.suretekinfosoft.com/it-consulting.php"
+                        class="block py-1 hover:text-white transition-colors">IT Consulting</a></li>
+                <li><a href="https://www.suretekinfosoft.com/web-application-development.php"
+                        class="block py-1 hover:text-white transition-colors">Web Apps</a></li>
+                <li><a href="https://www.suretekinfosoft.com/ai-solutions.php"
+                        class="block py-1 hover:text-white transition-colors">AI Solutions</a></li>
+            </ul>
+        </div>
+
+        <!-- Industries -->
+        <div class="col-span-1 lg:col-span-1">
+            <h5 class="text-lg font-semibold mb-6">Industries</h5>
+            <ul class="space-y-3">
+                <li><a href="https://www.suretekinfosoft.com/financial-services-and-fintech.php"
+                        class="block py-1 hover:text-white transition-colors">Financial Services & Fintech</a></li>
+                <li><a href="https://www.suretekinfosoft.com/mobile-solutions.php"
+                        class="block py-1 hover:text-white transition-colors">Mobile Solutions</a></li>
+                <li><a href="https://www.suretekinfosoft.com/e-learning-solutions.php"
+                        class="block py-1 hover:text-white transition-colors">E-Learning Solutions</a></li>
+                <li><a href="https://www.suretekinfosoft.com/e-commerce-development.php"
+                        class="block py-1 hover:text-white transition-colors">E-Commerce Development</a></li>
+                <li><a href="https://www.suretekinfosoft.com/healthcare-and-medtech.php"
+                        class="block py-1 hover:text-white transition-colors">Healthcare & MedTech</a></li>
+                <li><a href="https://www.suretekinfosoft.com/travel-and-hospitality.php"
+                        class="block py-1 hover:text-white transition-colors">Travel & Hospitality</a></li>
+                <li><a href="https://www.suretekinfosoft.com/retail-and-consumer-goods.php"
+                        class="block py-1 hover:text-white transition-colors">Retail & Consumer Goods</a></li>
+                <li><a href="https://www.suretekinfosoft.com/logistics-and-supply-chain.php"
+                        class="block py-1 hover:text-white transition-colors">Logistics & Supply Chain</a></li>
+            </ul>
+        </div>
+
+        <!-- Success Stories + Company -->
+        <div class="col-span-2 md:col-span-1 lg:col-span-1 space-y-8">
+            <div>
+                <h5 class="text-lg font-semibold mb-6">Success Stories</h5>
+                <ul class="space-y-3 mb-8">
+                    <li><a href="https://www.suretekinfosoft.com/blogs.php"
+                            class="block py-1 hover:text-white transition-colors">Blogs</a></li>
+                    <li><a href="https://www.suretekinfosoft.com/case-studies.php"
+                            class="block py-1 hover:text-white transition-colors">Case Studies</a></li>
+                </ul>
+            </div>
+            <div class="hidden md:block">
+                <hr class="border-gray-600 max-w-36 mb-6">
+                <h5 class="text-lg font-semibold mb-6">Company</h5>
+                <ul class="space-y-3">
+                    <li><a href="https://www.suretekinfosoft.com/careers.php"
+                            class="block py-1 hover:text-white transition-colors">Careers</a></li>
+                    <li><a href="https://www.suretekinfosoft.com/about-us.php"
+                            class="block py-1 hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="https://www.suretekinfosoft.com/privacy-policy.php"
+                            class="block py-1 hover:text-white transition-colors">Privacy Policy</a></li>
+                    <li><a href="https://www.suretekinfosoft.com/assets/images/suretek-brochure.pdf" target="_blank"
+                            class="block py-1 hover:text-white transition-colors">Download Brochure</a></li>
+                </ul>
+            </div>
+            <div class="md:hidden">
+                <h5 class="text-lg font-semibold mb-6">Company</h5>
+                <ul class="space-y-3">
+                    <li><a href="https://www.suretekinfosoft.com/careers.php"
+                            class="block py-1 hover:text-white transition-colors">Careers</a></li>
+                    <li><a href="https://www.suretekinfosoft.com/about-us.php"
+                            class="block py-1 hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="https://www.suretekinfosoft.com/team.php"
+                            class="block py-1 hover:text-white transition-colors">Our Team</a></li>
+                    <li><a href="https://www.suretekinfosoft.com/global-ties.php"
+                            class="block py-1 hover:text-white transition-colors">Global Ties</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p class="text-center text-xs bg-black py-3 text-gray-300">© 2026 Suretek Infosoft Pvt Ltd. All Rights Reserved.</p>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Sticky Navbar styling on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-sm');
+                navbar.classList.replace('bg-white/95', 'bg-white/100');
+            } else {
+                navbar.classList.remove('shadow-sm');
+                navbar.classList.replace('bg-white/100', 'bg-white/95');
+            }
+        });
+
+        // Scroll Reveal Animation with Intersection Observer
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => {
+            revealOnScroll.observe(el);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium IT & Digital Services for US Businesses | Suretek Infosoft</title>
+    <meta name="description"
+        content="Suretek Infosoft provides premium, high-quality IT, web, and software development services for US businesses at special strategic pricing.">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepblue: '#0A2540',
+                        brightblue: '#a22426',
+                        successgreen: '#28A745',
+                        lightbg: '#F8F9FA',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for Animations & UI Polish */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #007BFF, #28A745);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-pattern {
+            background-color: #0A2540;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #007BFF;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-white selection:bg-brightblue selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="scrollToTop()">
+                    <img class="max-w-36 transition-transform"
+                        src="https://www.suretekinfosoft.com/assets/images/logo1.png" alt="" title="">
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about"
+                        class="nav-link text-gray-600 hover:text-brightblue font-medium transition-all duration-300 relative group">
+                        About
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brightblue transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#services"
+                        class="nav-link text-gray-600 hover:text-brightblue font-medium transition-all duration-300 relative group">
+                        Services
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brightblue transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#offer"
+                        class="text-brightblue hover:text-black font-semibold transition-all duration-300 flex items-center gap-1 relative group">
+                        <i data-lucide="tag" class="w-4 h-4"></i> Special Offer
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#portfolio"
+                        class="nav-link text-gray-600 hover:text-brightblue font-medium transition-all duration-300 relative group">
+                        Portfolio
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brightblue transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact"
+                        class="cta-nav bg-black hover:bg-brightblue  text-white px-6 py-2.5 rounded font-medium transition-all transform hover:-translate-y-0.5 shadow-lg shadow-black/30 hover:shadow-brightblue/30 group relative overflow-hidden">
+                        <span class="relative z-10 flex items-center gap-2">Get a Quote</span>
+                        <!-- <div class="absolute inset-0 bg-white/20 scale-0 group-hover:scale-150 transition-transform origin-center duration-300"></div> -->
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn"
+                        class="text-gray-600 hover:text-deepblue focus:outline-none p-1 rounded-lg hover:bg-gray-100 transition-all">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl backdrop-blur-md">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#about"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brightblue hover:bg-gray-50 rounded-md transition-all group">
+                    About <span class="ml-2 opacity-0 group-hover:opacity-100 transition-all">→</span>
+                </a>
+                <a href="#services"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brightblue hover:bg-gray-50 rounded-md transition-all group">
+                    Services <span class="ml-2 opacity-0 group-hover:opacity-100 transition-all">→</span>
+                </a>
+                <a href="#offer"
+                    class="block px-3 py-3 text-base font-medium text-successgreen hover:bg-green-50 rounded-md transition-all group">
+                    Special Offer <span class="ml-2 opacity-0 group-hover:opacity-100 transition-all">★</span>
+                </a>
+                <a href="#portfolio"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brightblue hover:bg-gray-50 rounded-md transition-all group">
+                    Portfolio <span class="ml-2 opacity-0 group-hover:opacity-100 transition-all">→</span>
+                </a>
+                <a href="#contact"
+                    class="block mt-4 text-center bg-brightblue hover:bg-black text-white px-4 py-3 rounded-md font-medium transition-all transform hover:-translate-y-0.5 shadow-lg">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 hero-pattern overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto reveal">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/40 border border-blue-500/30 text-blue-200 text-sm font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brightblue animate-pulse"></span>
+                    Exclusive Pricing for US Enterprises & Startups
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Premium IT & Digital Services <br class="hidden md:block" />
+                    <span class="text-brightblue">Now at Special Reduced Pricing</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Gain a strategic advantage. Suretek Infosoft delivers high-quality, scalable web, mobile, and
+                    software solutions at affordable rates for a limited time.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contact"
+                        class="w-full sm:w-auto bg-brightblue hover:bg-black text-white px-8 py-4 rounded-full font-medium transition-all transform hover:-translate-y-0.5 shadow-lg shadow-brightblue/30 hover:shadow-black/30 flex items-center justify-center gap-2 border-2 border-brightblue hover:border-black">
+                        Get Free Consultation <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#services"
+                        class="w-full sm:w-auto bg-transparent border-2 border-gray-400 hover:border-white text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:bg-white/5">
+                        View Services
+                    </a>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-white/10 reveal">
+                <div class="text-center">
+                    <h3 class="text-5xl font-bold text-white mb-1">1000+</h3>
+                    <p class="text-gray-400 text-sm font-medium">Projects Delivered</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-5xl font-bold text-brightblue mb-1">99%</h3>
+                    <p class="text-gray-400 text-sm font-medium">Client Satisfaction</p>
+                </div>
+
+                <div class="text-center">
+                    <h3 class="text-5xl font-bold text-white mb-1">15+</h3>
+                    <p class="text-gray-400 text-sm font-medium">Years Experience</p>
+                </div>
+
+                <div class="text-center">
+                    <h3 class="text-5xl font-bold text-white mb-1">700k</h3>
+                    <p class="text-gray-400 text-sm font-medium">Development Hours</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Abstract Decoration -->
+        <div
+            class="absolute top-1/2 left-0 w-64 h-64 bg-brightblue rounded-full mix-blend-multiply filter blur-[128px] opacity-40 animate-blob">
+        </div>
+        <div
+            class="absolute top-1/2 right-0 w-64 h-64 bg-successgreen rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob animation-delay-2000">
+        </div>
+    </section>
+
+    <!-- About Section - Clean Minimal Design -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32 items-center">
+
+                <!-- Content -->
+                <div class="space-y-8 reveal">
+                    <div class="inline-block">
+                        <span
+                            class="text-brightblue font-bold uppercase tracking-widest text-sm px-4 py-2 bg-brightblue/5 rounded-full hover:bg-brightblue/10 transition-all duration-300 cursor-pointer">About
+                            Suretek Infosoft</span>
+                    </div>
+
+                    <div>
+                        <h2
+                            class="text-4xl lg:text-5xl font-black text-black leading-tight mb-6 hover:text-brightblue transition-colors duration-500 cursor-pointer">
+                            Global IT <br class="hidden lg:block">
+                            <span class="text-brightblue block">Excellence</span>
+                        </h2>
+                        <p
+                            class="text-black/80 text-lg leading-relaxed max-w-lg hover:text-black/90 transition-all duration-300">
+                            Premier IT service provider delivering innovative, cost-effective solutions that drive ROI
+                            for partners worldwide.
+                        </p>
+                    </div>
+
+                    <!-- Simple Interactive Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                        <div
+                            class="card group p-6 rounded-2xl border border-black/10 hover:border-brightblue/50 hover:bg-brightblue/5 hover:-translate-y-2 transition-all duration-400 cursor-pointer">
+                            <div
+                                class="w-12 h-12 bg-brightblue rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <h4 class="font-bold text-lg text-black mb-2 group-hover:text-brightblue transition-colors">
+                                ISO Certified</h4>
+                            <p class="text-black/70 text-sm group-hover:text-black/90">Quality standards guaranteed</p>
+                        </div>
+
+                        <div
+                            class="card group p-6 rounded-2xl border border-black/10 hover:border-brightblue/50 hover:bg-brightblue/5 hover:-translate-y-2 transition-all duration-400 cursor-pointer">
+                            <div
+                                class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 border-2 border-brightblue group-hover:bg-brightblue group-hover:border-black transition-all duration-300">
+                                <i data-lucide="clock" class="w-6 h-6 text-brightblue group-hover:text-white"></i>
+                            </div>
+                            <h4 class="font-bold text-lg text-black mb-2 group-hover:text-brightblue transition-colors">
+                                US Time Zones</h4>
+                            <p class="text-black/70 text-sm group-hover:text-black/90">Seamless communication</p>
+                        </div>
+                    </div>
+
+                    <a href="#contact"
+                        class="group inline-flex items-center gap-3 text-black font-bold text-lg border-b-2 border-black hover:border-brightblue hover:text-brightblue transition-all duration-300 pb-1 cursor-pointer">
+                        Get Started
+                        <i data-lucide="arrow-right"
+                            class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+
+                <!-- Image -->
+                <div class="relative group/image">
+                    <div
+                        class="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl group-hover/image:shadow-2xl group-hover/image:scale-[1.02] transition-all duration-700 cursor-pointer bg-black/5">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Suretek Team"
+                            class="w-full h-full object-cover group-hover/image:scale-105 transition-transform duration-700">
+                    </div>
+
+                    <!-- Simple floating badge -->
+                    <div
+                        class="absolute -top-6 -right-6 bg-brightblue text-white px-6 py-3 rounded-bl-2xl rounded-tr-xl shadow-xl group-hover/image:-rotate-6 transition-all duration-500 font-bold">
+                        Top Rated Agency
+                        <i data-lucide="star" class="w-4 h-4 ml-1 inline"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Services Section - Perfect Grid Alignment -->
+<section id="services" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <!-- Simple Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <p class="text-xl text-gray-600 max-w-lg mx-auto">Comprehensive digital solutions to grow your business</p>
+        </div>
+
+        <!-- Perfect 2x4 Grid - All Cards Same Size -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Card 1 -->
+            <div class="group p-8 border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div class="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors flex-shrink-0">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m0 0a9 9 0 019 9m-9-9a9 9 0 019-9"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors flex-shrink-0">Web Development</h3>
+                <p class="text-gray-600 text-sm mb-6 flex-grow">React, Next.js, Node.js</p>
+                <a href="#" class="text-sm font-semibold text-blue-600 hover:text-blue-700 group-hover:translate-x-1 transition-all inline-flex items-center">Learn More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group p-8 border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div class="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition-colors flex-shrink-0">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors flex-shrink-0">Mobile Apps</h3>
+                <p class="text-gray-600 text-sm mb-6 flex-grow">iOS, Android, Flutter</p>
+                <a href="#" class="text-sm font-semibold text-emerald-600 hover:text-emerald-700 group-hover:translate-x-1 transition-all inline-flex items-center">Learn More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group p-8 border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div class="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors flex-shrink-0">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.5h3m1.5 0v-3.5a2.5 2.5 0 0 0-5 0V21.5"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors flex-shrink-0">UI/UX Design</h3>
+                <p class="text-gray-600 text-sm mb-6 flex-grow">User-centric interfaces</p>
+                <a href="#" class="text-sm font-semibold text-purple-600 hover:text-purple-700 group-hover:translate-x-1 transition-all inline-flex items-center">Learn More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="group p-8 border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div class="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors flex-shrink-0">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors flex-shrink-0">GoHighLevel</h3>
+                <p class="text-gray-600 text-sm mb-6 flex-grow">CRM + Marketing Automation</p>
+                <a href="#" class="text-sm font-semibold text-orange-600 hover:text-orange-700 group-hover:translate-x-1 transition-all inline-flex items-center">Learn More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="group p-8 border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div class="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 transition-colors flex-shrink-0">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 7.5M7 13l-1.5 7.5M17 13l1.5 7.5M17 13l2.5 5"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors flex-shrink-0">E-commerce</h3>
+                <p class="text-gray-600 text-sm mb-6 flex-grow">Shopify, WooCommerce</p>
+                <a href="#" class="text-sm font-semibold text-indigo-600 hover:text-indigo-700 group-hover:translate-x-1 transition-all inline-flex items-center">Learn More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="group p-8 border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div class="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-6 group-hover:bg-rose-600 transition-colors flex-shrink-0">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors flex-shrink-0">Digital Marketing</h3>
+                <p class="text-gray-600 text-sm mb-6 flex-grow">SEO, PPC, Social</p>
+                <a href="#" class="text-sm font-semibold text-rose-600 hover:text-rose-700 group-hover:translate-x-1 transition-all inline-flex items-center">Learn More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="group p-8 border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div class="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors flex-shrink-0">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors flex-shrink-0">Custom Software</h3>
+                <p class="text-gray-600 text-sm mb-6 flex-grow">CRM, ERP, SaaS</p>
+                <a href="#" class="text-sm font-semibold text-teal-600 hover:text-teal-700 group-hover:translate-x-1 transition-all inline-flex items-center">Learn More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="group p-8 border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div class="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-600 transition-colors flex-shrink-0">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors flex-shrink-0">AI & Automation</h3>
+                <p class="text-gray-600 text-sm mb-6 flex-grow">ChatGPT, ML, Workflows</p>
+                <a href="#" class="text-sm font-semibold text-cyan-600 hover:text-cyan-700 group-hover:translate-x-1 transition-all inline-flex items-center">Learn More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+        </div>
+
+        <!-- Clean CTA -->
+        <div class="text-center mt-16">
+            <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 text-lg font-bold text-gray-900 border-2 border-gray-900 rounded-xl hover:bg-gray-900 hover:text-white transition-all duration-300 group">
+                Ready to get started?
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+    <!-- Special Offer Section -->
+    <section id="offer" class="py-20 bg-deepblue relative overflow-hidden">
+        <!-- Background graphics -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="pricing-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M0 40L40 0H20L0 20M40 40V20L20 40" fill="currentColor" stroke="none" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#pricing-pattern)" class="text-brightblue" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl reveal flex flex-col lg:flex-row">
+
+                <!-- Left Context -->
+                <div class="p-10 lg:p-14 lg:w-3/5 bg-white">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-600 text-sm font-bold mb-6">
+                        <i data-lucide="clock" class="w-4 h-4"></i> Limited Time Offer
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-deepblue mb-4">Strategic Advantage Pricing for US
+                        Companies</h2>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        In today's economic climate, smart businesses are optimizing their tech budgets. For a limited
+                        time, Suretek Infosoft is offering our premium enterprise-grade development services to US
+                        clients at a uniquely reduced strategic rate.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <div class="bg-blue-100 p-1.5 rounded-full"><i data-lucide="trending-down"
+                                    class="w-5 h-5 text-brightblue"></i></div>
+                            <span class="text-gray-800 font-medium">Up to 60% cost reduction vs. local US
+                                agencies</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="bg-blue-100 p-1.5 rounded-full"><i data-lucide="shield-check"
+                                    class="w-5 h-5 text-brightblue"></i></div>
+                            <span class="text-gray-800 font-medium">Zero compromise on code quality or
+                                architecture</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="bg-blue-100 p-1.5 rounded-full"><i data-lucide="zap"
+                                    class="w-5 h-5 text-brightblue"></i></div>
+                            <span class="text-gray-800 font-medium">Dedicated project managers assigned to your time
+                                zone</span>
+                        </li>
+                    </ul>
+                    <p class="text-sm text-gray-500 italic">*Offer valid for new contracts signed this month. Limited to
+                        5 new enterprise slots to ensure quality.</p>
+                </div>
+
+                <!-- Right Comparison & CTA -->
+                <div class="p-10 lg:p-14 lg:w-2/5 bg-gray-50 border-l border-gray-200 flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-center text-deepblue mb-6">The Suretek Advantage</h3>
+
+                    <div
+                        class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 mb-4 flex justify-between items-center">
+                        <div>
+                            <p class="text-sm text-gray-500 font-medium">Typical US Agency</p>
+                            <p class="font-bold text-gray-400 line-through text-xl">$150 - $250/hr</p>
+                        </div>
+                        <i data-lucide="x-circle" class="text-gray-300 w-8 h-8"></i>
+                    </div>
+
+                    <div
+                        class="bg-green-50 p-5 rounded-xl shadow-md border-2 border-successgreen mb-8 flex justify-between items-center transform scale-105">
+                        <div>
+                            <p class="text-sm text-green-800 font-bold uppercase tracking-wider mb-1">Suretek Premium
+                                Rate</p>
+                            <p class="font-extrabold text-successgreen text-3xl">Inquire for Price</p>
+                            <p class="text-xs text-green-700 mt-1">Guaranteed ROI-focused pricing</p>
+                        </div>
+                        <i data-lucide="check-circle" class="text-successgreen w-10 h-10"></i>
+                    </div>
+
+                    <a href="#contact"
+                        class="w-full bg-successgreen hover:bg-green-600 text-white py-4 rounded-xl font-bold text-lg text-center transition-all shadow-[0_0_15px_rgba(40,167,69,0.4)] hover:shadow-[0_0_25px_rgba(40,167,69,0.6)]">
+                        Claim Your Rate Now
+                    </a>
+                    <p class="text-center text-sm text-red-500 font-semibold mt-4">Only 3 slots remaining</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-deepblue mb-4">Why US Businesses Trust Suretek</h2>
+                <p class="text-gray-600 text-lg">We bridge the gap between premium quality and operational efficiency.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center reveal">
+                    <div
+                        class="w-20 h-20 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border border-blue-100">
+                        <i data-lucide="gem" class="w-10 h-10 text-brightblue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-deepblue mb-2">Unmatched Quality</h3>
+                    <p class="text-gray-600 text-sm">Rigorous QA processes and clean, scalable code architecture ensure
+                        your product works flawlessly.</p>
+                </div>
+                <div class="text-center reveal" style="transition-delay: 100ms;">
+                    <div
+                        class="w-20 h-20 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border border-blue-100">
+                        <i data-lucide="rocket" class="w-10 h-10 text-brightblue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-deepblue mb-2">Rapid Delivery</h3>
+                    <p class="text-gray-600 text-sm">Agile sprints and a dedicated workforce mean your product hits the
+                        market faster than the competition.</p>
+                </div>
+                <div class="text-center reveal" style="transition-delay: 200ms;">
+                    <div
+                        class="w-20 h-20 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border border-blue-100">
+                        <i data-lucide="users" class="w-10 h-10 text-brightblue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-deepblue mb-2">Top 1% Talent</h3>
+                    <p class="text-gray-600 text-sm">Access a vetted pool of senior developers, UI/UX experts, and cloud
+                        architects ready to scale your vision.</p>
+                </div>
+                <div class="text-center reveal" style="transition-delay: 300ms;">
+                    <div
+                        class="w-20 h-20 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border border-blue-100">
+                        <i data-lucide="headphones" class="w-10 h-10 text-brightblue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-deepblue mb-2">US Time Zone Support</h3>
+                    <p class="text-gray-600 text-sm">We provide overlap hours to ensure seamless communication,
+                        standups, and real-time collaboration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-lightbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+                <div class="max-w-2xl">
+                    <h4 class="text-brightblue font-bold uppercase tracking-wider text-sm mb-2">Featured Work</h4>
+                    <h2 class="text-3xl md:text-4xl font-bold text-deepblue">Solutions That Drive Results</h2>
+                </div>
+                <a href="#contact"
+                    class="mt-4 md:mt-0 text-brightblue font-semibold hover:text-blue-800 flex items-center gap-1">
+                    View All Projects <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div
+                    class="group relative rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all reveal cursor-pointer">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Fintech Dashboard"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-deepblue/90 to-transparent opacity-80"></div>
+                        <div
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold border border-white/30">
+                            FinTech</div>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold mb-2">PayFlow Analytics</h3>
+                        <p
+                            class="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Complete architectural rewrite and UI overhaul for a US-based payment processor.</p>
+                        <div class="flex gap-4">
+                            <div class="flex flex-col">
+                                <span class="text-successgreen font-bold text-lg">+150%</span>
+                                <span class="text-xs text-gray-400 uppercase">Conversion</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-brightblue font-bold text-lg">3x</span>
+                                <span class="text-xs text-gray-400 uppercase">Faster Load</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all reveal cursor-pointer"
+                    style="transition-delay: 100ms;">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Mobile E-commerce App"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-deepblue/90 to-transparent opacity-80"></div>
+                        <div
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold border border-white/30">
+                            E-Commerce</div>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold mb-2">ShopNova App</h3>
+                        <p
+                            class="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            React Native mobile application built for a retail giant with real-time inventory sync.</p>
+                        <div class="flex gap-4">
+                            <div class="flex flex-col">
+                                <span class="text-successgreen font-bold text-lg">4.9</span>
+                                <span class="text-xs text-gray-400 uppercase">App Store Rating</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-brightblue font-bold text-lg">2M+</span>
+                                <span class="text-xs text-gray-400 uppercase">Downloads</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div
+                    class="group relative rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all reveal cursor-pointer">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Healthcare Portal"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-deepblue/90 to-transparent opacity-80"></div>
+                        <div
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold border border-white/30">
+                            Healthcare</div>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold mb-2">CareConnect Portal</h3>
+                        <p
+                            class="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            HIPAA-compliant patient management system with telemedicine video integration.</p>
+                        <div class="flex gap-4">
+                            <div class="flex flex-col">
+                                <span class="text-successgreen font-bold text-lg">100%</span>
+                                <span class="text-xs text-gray-400 uppercase">Compliance</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-brightblue font-bold text-lg">-40%</span>
+                                <span class="text-xs text-gray-400 uppercase">Admin Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group relative rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all reveal cursor-pointer"
+                    style="transition-delay: 100ms;">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Data Analytics Software"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-deepblue/90 to-transparent opacity-80"></div>
+                        <div
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold border border-white/30">
+                            SaaS</div>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold mb-2">DataMetrics AI</h3>
+                        <p
+                            class="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Custom AI-driven marketing analytics dashboard built on React and Node.js.</p>
+                        <div class="flex gap-4">
+                            <div class="flex flex-col">
+                                <span class="text-successgreen font-bold text-lg">$2M+</span>
+                                <span class="text-xs text-gray-400 uppercase">ARR Generated</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-brightblue font-bold text-lg">99.9%</span>
+                                <span class="text-xs text-gray-400 uppercase">Uptime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h4 class="text-brightblue font-bold uppercase tracking-wider text-sm mb-2">Client Success Stories</h4>
+                <h2 class="text-3xl md:text-4xl font-bold text-deepblue mb-4">Trusted by US Business Leaders</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-lightbg p-8 rounded-2xl relative reveal">
+                    <i data-lucide="quote" class="absolute top-6 right-6 w-10 h-10 text-gray-200"></i>
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star"
+                            class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i
+                            data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star"
+                            class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Partnering with Suretek Infosoft was the best strategic
+                        decision for our startup. They delivered our MVP ahead of schedule and the code quality was
+                        phenomenal. We saved thousands compared to hiring locally."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-deepblue text-sm">Michael T.</h4>
+                            <p class="text-xs text-gray-500">CTO, Logistix AI (San Francisco, CA)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-lightbg p-8 rounded-2xl relative reveal" style="transition-delay: 100ms;">
+                    <i data-lucide="quote" class="absolute top-6 right-6 w-10 h-10 text-gray-200"></i>
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star"
+                            class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i
+                            data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star"
+                            class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"The level of communication and dedication from the Suretek
+                        team is unmatched. They feel like an extension of our in-house team. The custom ERP they built
+                        increased our operational efficiency by 40%."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-deepblue text-sm">Sarah Jenkins</h4>
+                            <p class="text-xs text-gray-500">VP of Ops, RetailCore (Austin, TX)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-lightbg p-8 rounded-2xl relative reveal" style="transition-delay: 200ms;">
+                    <i data-lucide="quote" class="absolute top-6 right-6 w-10 h-10 text-gray-200"></i>
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star"
+                            class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i
+                            data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star"
+                            class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"I was initially hesitant about offshore development, but
+                        Suretek changed my mind entirely. Their UI/UX design is world-class, and their technical
+                        execution on our healthcare app was flawless and HIPAA compliant."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-deepblue text-sm">David Chen</h4>
+                            <p class="text-xs text-gray-500">Founder, HealthBridge (New York, NY)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-deepblue text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-5">
+            <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M0 40L40 0H20L0 20M40 40V20L20 40" fill="currentColor" stroke="none" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h4 class="text-brightblue font-bold uppercase tracking-wider text-sm mb-2">How We Work</h4>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">A Proven Process for Success</h2>
+                <p class="text-gray-400 text-lg">From concept to deployment, our transparent methodology ensures zero
+                    surprises and maximum ROI.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-center relative">
+                <!-- Connecting Line for Desktop -->
+                <div class="hidden md:block absolute top-10 left-10 right-10 h-0.5 bg-gray-700 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 reveal">
+                    <div
+                        class="w-20 h-20 mx-auto bg-deepblue border-4 border-gray-700 rounded-full flex items-center justify-center mb-4 transition-colors hover:border-white">
+                        <i data-lucide="message-square" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">1. Consultation</h3>
+                    <p class="text-sm text-gray-400">Understanding your business goals and technical requirements.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 reveal" style="transition-delay: 100ms;">
+                    <div
+                        class="w-20 h-20 mx-auto bg-deepblue border-4 border-gray-700 rounded-full flex items-center justify-center mb-4 transition-colors hover:border-white">
+                        <i data-lucide="file-search" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">2. Planning</h3>
+                    <p class="text-sm text-gray-400">Creating wireframes, tech stack selection, and project roadmaps.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 reveal" style="transition-delay: 200ms;">
+                    <div
+                        class="w-20 h-20 mx-auto bg-deepblue border-4 border-white rounded-full flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(0,123,255,0.5)]">
+                        <i data-lucide="code-2" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">3. Development</h3>
+                    <p class="text-sm text-gray-400">Agile coding sprints with regular updates and feedback loops.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 reveal" style="transition-delay: 300ms;">
+                    <div
+                        class="w-20 h-20 mx-auto bg-deepblue border-4 border-gray-700 rounded-full flex items-center justify-center mb-4 transition-colors hover:border-white">
+                        <i data-lucide="rocket" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">4. Delivery</h3>
+                    <p class="text-sm text-gray-400">Rigorous QA testing, deployment, and performance optimization.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="relative z-10 reveal" style="transition-delay: 400ms;">
+                    <div
+                        class="w-20 h-20 mx-auto bg-deepblue border-4 border-gray-700 rounded-full flex items-center justify-center mb-4 transition-colors hover:border-white">
+                        <i data-lucide="headset" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">5. Support</h3>
+                    <p class="text-sm text-gray-400">Ongoing maintenance, updates, and scalability enhancements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-To-Action Section -->
+    <section class="py-20 bg-relative">
+        <!-- <div class="absolute inset-0 bg-black/300 opacity-90"></div> -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center reveal">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                Stop overpaying for local development. Get enterprise-grade solutions built by global experts. Secure
+                your limited-time strategic pricing today.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact"
+                    class="bg-black text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brightblue transition-all shadow-lg transform hover:-translate-y-1">
+                    Start Your Project Today
+                </a>
+                <a href="mailto:info@suretekinfosoft.com"
+                    class="bg-brightblue border-2 border-bightblue text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-transparent hover:text-black hover:border-black transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="calendar" class="w-5 h-5"></i> Book a Call
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-lightbg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Info -->
+                <div class="reveal">
+                    <h4 class="text-brightblue font-bold uppercase tracking-wider text-sm mb-2">Get in Touch</h4>
+                    <h2 class="text-3xl md:text-4xl font-bold text-deepblue mb-6">Let's Discuss Your Next Big Idea.</h2>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        Fill out the form to request a free quote or consultation. Our business analysts will review
+                        your requirements and get back to you within 24 hours.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-white p-3 rounded-xl shadow-sm"><i data-lucide="mail"
+                                    class="w-6 h-6 text-brightblue"></i></div>
+                            <div>
+                                <h4 class="font-bold text-deepblue text-lg">Email Us</h4>
+                                <a href="mailto:info@suretekinfosoft.com"
+                                    class="text-gray-600 hover:text-brightblue">info@suretekinfosoft.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-white p-3 rounded-xl shadow-sm"><i data-lucide="phone-call"
+                                    class="w-6 h-6 text-brightblue"></i></div>
+                            <div>
+                                <h4 class="font-bold text-deepblue text-lg">Call or WhatsApp</h4>
+                                <p class="text-gray-600">+1 (555) 123-4567 (US Sales)</p>
+                                <p class="text-gray-600">+91 98765 43210 (Global Headquaters)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-white p-3 rounded-xl shadow-sm"><i data-lucide="map-pin"
+                                    class="w-6 h-6 text-brightblue"></i></div>
+                            <div>
+                                <h4 class="font-bold text-deepblue text-lg">Global Headquarters</h4>
+                                <p class="text-gray-600">Noida, Uttar Pradesh, India<br>Serving Clients Globally</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white p-8 md:p-10 rounded-2xl shadow-xl reveal">
+                    <h3 class="text-2xl font-bold text-deepblue mb-6">Request a Free Quote</h3>
+                    <form action="#" method="POST" class="space-y-5"
+                        onsubmit="event.preventDefault(); alert('Thank you for reaching out! A representative will contact you shortly.');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name
+                                    *</label>
+                                <input type="text" id="name" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white transition-colors"
+                                    placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company
+                                    Name</label>
+                                <input type="text" id="company"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white transition-colors"
+                                    placeholder="Acme Corp">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Business Email
+                                    *</label>
+                                <input type="email" id="email" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white transition-colors"
+                                    placeholder="john@company.com">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone
+                                    Number</label>
+                                <input type="tel" id="phone"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white transition-colors"
+                                    placeholder="+1 (555) 000-0000">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Required
+                                *</label>
+                            <select id="service" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white transition-colors text-gray-700">
+                                <option value="">Select a service...</option>
+                                <option value="web">Web Development</option>
+                                <option value="mobile">Mobile App Development</option>
+                                <option value="custom_software">Custom Software Dev</option>
+                                <option value="ecommerce">E-commerce Solution</option>
+                                <option value="digital_marketing">Digital Marketing / SEO</option>
+                                <option value="ui_ux">UI/UX Design</option>
+                                <option value="other">Other / Not Sure</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Project Details
+                                *</label>
+                            <textarea id="message" rows="4" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white transition-colors resize-none"
+                                placeholder="Briefly describe your project requirements and goals..."></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-black hover:bg-brightblue text-white py-4 rounded-lg font-bold text-lg transition-all shadow-md hover:shadow-xl flex justify-center items-center gap-2">
+                            Send Message <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                        <p class="text-xs text-center text-gray-500 mt-3"><i data-lucide="lock"
+                                class="w-3 h-3 inline mr-1"></i> Your information is secure and will never be shared.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#051120] text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-brightblue rounded flex items-center justify-center">
+                            <i data-lucide="code-2" class="text-white w-5 h-5"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white tracking-tight">Suretek<span
+                                class="text-brightblue">.</span></span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                        Premium IT & Digital solutions designed to scale your business. Quality development, strategic
+                        pricing.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-brightblue hover:text-white transition-colors"><i
+                                data-lucide="linkedin" class="w-4 h-4"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-brightblue hover:text-white transition-colors"><i
+                                data-lucide="twitter" class="w-4 h-4"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-brightblue hover:text-white transition-colors"><i
+                                data-lucide="facebook" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-brightblue transition-colors">About Us</a></li>
+                        <li><a href="#portfolio" class="hover:text-brightblue transition-colors">Portfolio</a></li>
+                        <li><a href="#" class="hover:text-brightblue transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-brightblue transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brightblue transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="hover:text-brightblue transition-colors">Web Development</a></li>
+                        <li><a href="#services" class="hover:text-brightblue transition-colors">Mobile Applications</a>
+                        </li>
+                        <li><a href="#services" class="hover:text-brightblue transition-colors">UI/UX Design</a></li>
+                        <li><a href="#services" class="hover:text-brightblue transition-colors">Digital Marketing</a>
+                        </li>
+                        <li><a href="#services" class="hover:text-brightblue transition-colors">Custom Software</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-brightblue mt-0.5"></i>
+                            <span>Noida, UP, India</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-brightblue"></i>
+                            <a href="mailto:info@suretekinfosoft.com"
+                                class="hover:text-white transition-colors">info@suretekinfosoft.com</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-brightblue"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 Suretek Infosoft. All rights reserved.</p>
+                <p>Designed for global excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Sticky Navbar styling on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('bg-white/90', 'bg-white/95');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('bg-white/95', 'bg-white/90');
+            }
+        });
+
+        // Scroll Reveal Animation with Intersection Observer
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => {
+            revealOnScroll.observe(el);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Software Development Company USA | Suretek Infosoft</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+color:#222;
+line-height:1.6;
+background:#fff;
+}
+
+.container{
+width:90%;
+max-width:1300px;
+margin:auto;
+}
+
+section{
+padding:80px 0;
+}
+
+h1,h2,h3{
+font-weight:700;
+}
+
+a{
+text-decoration:none;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:#a22426;
+color:#fff;
+border-radius:6px;
+transition:.3s;
+font-weight:600;
+}
+
+.btn:hover{
+background:#861d1f;
+}
+
+/* HERO */
+
+.hero{
+padding:120px 0;
+color:#fff;
+background:
+linear-gradient(110deg,
+rgba(162,36,38,.95) 0%,
+rgba(82,18,70,.92) 45%,
+rgba(15,25,60,.92) 100%),
+url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:720px;
+}
+
+.tag{
+display:inline-block;
+padding:8px 18px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.2);
+border-radius:50px;
+font-size:13px;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:58px;
+line-height:1.15;
+margin-bottom:22px;
+}
+
+.hero h1 span{
+color:#ff4b4e;
+}
+
+.hero p{
+font-size:18px;
+color:#f2f2f2;
+max-width:650px;
+margin-bottom:30px;
+}
+
+.hero-points{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+margin-bottom:35px;
+}
+
+.hero-points div{
+font-size:15px;
+}
+
+.hero-points i{
+color:#fff;
+margin-right:8px;
+}
+
+/* SECTION TITLE */
+
+.title{
+text-align:center;
+margin-bottom:55px;
+}
+
+.title span{
+color:#a22426;
+font-size:14px;
+font-weight:700;
+letter-spacing:1px;
+text-transform:uppercase;
+}
+
+.title h2{
+font-size:42px;
+margin-top:8px;
+color:#111;
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:28px;
+}
+
+.service-card{
+padding:30px;
+border:1px solid #eee;
+border-radius:14px;
+transition:.3s;
+background:#fff;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+border-color:#a22426;
+}
+
+.service-card i{
+font-size:34px;
+color:#a22426;
+margin-bottom:18px;
+}
+
+.service-card h3{
+font-size:24px;
+margin-bottom:12px;
+}
+
+.service-card p{
+color:#666;
+}
+
+/* SOLUTIONS */
+
+.gray{
+background:#f7f7f7;
+}
+
+.solutions-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
+}
+
+.solution{
+background:#fff;
+padding:25px;
+border-radius:12px;
+text-align:center;
+border:1px solid #eee;
+}
+
+.solution i{
+font-size:28px;
+color:#a22426;
+margin-bottom:12px;
+}
+
+/* CASE STUDY */
+
+.case-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.case-card{
+background:#fff;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.case-card:hover{
+transform:translateY(-8px);
+}
+
+.case-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+.case-content{
+padding:22px;
+}
+
+.case-content h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.case-content p{
+font-size:15px;
+color:#666;
+margin-bottom:16px;
+}
+
+.case-content a{
+color:#a22426;
+font-weight:700;
+}
+
+/* WHY */
+
+.why{
+background:
+linear-gradient(90deg,#0d1335,#1d1030,#a22426);
+color:#fff;
+}
+
+.why-wrap{
+display:grid;
+grid-template-columns:1.3fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.stat{
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:12px;
+text-align:center;
+}
+
+.stat h3{
+font-size:34px;
+}
+
+/* CTA */
+
+.cta{
+background:#a22426;
+text-align:center;
+color:#fff;
+}
+
+.cta h2{
+font-size:42px;
+margin-bottom:12px;
+}
+
+.cta .btn{
+background:#fff;
+color:#a22426;
+margin-top:20px;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+padding:28px 0;
+text-align:center;
+color:#aaa;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+.services-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.case-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.solutions-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.services-grid,
+.case-grid,
+.solutions-grid,
+.why-wrap,
+.stats{
+grid-template-columns:1fr;
+}
+
+.title h2{
+font-size:34px;
+}
+
+section{
+padding:65px 0;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+
+<div class="tag">TOP SOFTWARE DEVELOPMENT COMPANY USA</div>
+
+<h1>Digital Solutions. <br>
+AI-Powered Innovation. <br>
+Built in the <span>USA</span> for the World.</h1>
+
+<p>
+Suretek Infosoft is a leading software development company in the USA delivering scalable, secure and AI-powered digital products for startups and enterprises.
+</p>
+
+<div class="hero-points">
+<div><i class="fa-solid fa-circle-check"></i>100% Client Satisfaction</div>
+<div><i class="fa-solid fa-circle-check"></i>Secure Solutions</div>
+<div><i class="fa-solid fa-circle-check"></i>On-Time Delivery</div>
+</div>
+
+<a href="#" class="btn">Let's Build Something Great</a>
+
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+
+<section>
+<div class="container">
+
+<div class="title">
+<span>OUR SERVICES IN USA</span>
+<h2>End-to-End Digital Solutions</h2>
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+<i class="fa-solid fa-mobile-screen"></i>
+<h3>Mobile App Development</h3>
+<p>iOS, Android and cross-platform apps with premium UI.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-globe"></i>
+<h3>Web App Development</h3>
+<p>Scalable web apps built for modern businesses.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-code"></i>
+<h3>Custom Software</h3>
+<p>Tailored solutions designed for growth and automation.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Software Testing</h3>
+<p>QA and testing for secure & reliable applications.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-robot"></i>
+<h3>AI Consulting</h3>
+<p>AI strategy, chatbots and business automation.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-cloud"></i>
+<h3>Cloud & IT Infra</h3>
+<p>AWS, Azure and cloud migration services.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- SOLUTIONS -->
+
+<section class="gray">
+<div class="container">
+
+<div class="title">
+<span>KEY SERVICES DELIVERED</span>
+<h2>Solutions That Drive Real Impact</h2>
+</div>
+
+<div class="solutions-grid">
+
+<div class="solution"><i class="fa-solid fa-brain"></i><p>AI/ML SaaS Platforms</p></div>
+<div class="solution"><i class="fa-solid fa-credit-card"></i><p>FinTech Apps</p></div>
+<div class="solution"><i class="fa-solid fa-car"></i><p>Taxi / Delivery Apps</p></div>
+<div class="solution"><i class="fa-solid fa-shield"></i><p>Cybersecurity Solutions</p></div>
+
+</div>
+
+</div>
+</section>
+
+<!-- CASE STUDY -->
+
+<section>
+<div class="container">
+
+<div class="title">
+<span>CASE STUDIES</span>
+<h2>Real Results. Real Impact.</h2>
+</div>
+
+<div class="case-grid">
+
+<div class="case-card">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80">
+<div class="case-content">
+<h3>AI Chatbot Platform</h3>
+<p>Automotive digital transformation with chatbot automation.</p>
+<a href="#">View Case Study →</a>
+</div>
+</div>
+
+<div class="case-card">
+<img src="https://images.unsplash.com/photo-1511527844068-006b95d162c2?auto=format&fit=crop&w=800&q=80">
+<div class="case-content">
+<h3>Taxi Booking App</h3>
+<p>Improved ride efficiency by 45% using smart booking.</p>
+<a href="#">View Case Study →</a>
+</div>
+</div>
+
+<div class="case-card">
+<img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=800&q=80">
+<div class="case-content">
+<h3>QSR Platform</h3>
+<p>Upgraded legacy restaurant platform to next-gen.</p>
+<a href="#">View Case Study →</a>
+</div>
+</div>
+
+<div class="case-card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80">
+<div class="case-content">
+<h3>Match Making App</h3>
+<p>Faith-based matchmaking platform powered by AI.</p>
+<a href="#">View Case Study →</a>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- WHY -->
+
+<section class="why">
+<div class="container">
+
+<div class="why-wrap">
+
+<div>
+<h2 style="font-size:44px; margin-bottom:18px;">Your Trusted Technology Partner in the USA</h2>
+<p style="max-width:620px;">
+We combine technology, experience and innovation to build high-performance digital products that scale faster.
+</p>
+<br>
+<a href="#" class="btn">Talk To Experts</a>
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h3>12+</h3>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h3>250+</h3>
+<p>Happy Clients</p>
+</div>
+
+<div class="stat">
+<h3>500+</h3>
+<p>Projects Delivered</p>
+</div>
+
+<div class="stat">
+<h3>95%</h3>
+<p>Client Retention</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+<div class="container">
+<h2>Ready To Start Your Project?</h2>
+<p>Let's build something innovative together.</p>
+<a href="#" class="btn">Get Free Consultation</a>
+</div>
+</section>
+
+<footer>
+<div class="container">
+© 2026 Suretek Infosoft. All Rights Reserved.
+</div>
+</footer>
+
+</body>
+</html>
